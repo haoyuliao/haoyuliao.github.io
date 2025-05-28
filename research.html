@@ -1,74 +1,175 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Projects | Sustainable Intelligence Systems</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <style>
+            body {
+                padding-top: 70px;
+                /* Adjust if your navbar is taller */
+            }
+        </style>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Sustainable Intelligence Systems</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            padding-top: 70px;
-            /* Adjust if your navbar is taller */
-        }
-    </style>
-</head>
-
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container"> <a class="navbar-brand" href="index.html">Sustainable Intelligence Systems</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"> <span class="navbar-toggler-icon"></span> </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
-                    <li class="nav-item"><a class="nav-link  active" href="research.html">Research</a></li>
-                    <li class="nav-item"><a class="nav-link" href="teaching.html">Teaching</a></li>i> </ul>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Sustainable Intelligence Systems</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="research.html">Research</a></li>
+                        <li class="nav-item"><a class="nav-link" href="teaching.html">Teaching</a></li>
+                    </ul>
+                </div>
             </div>
+        </nav>
+        <div class="container mt-5">
+            <h3><strong>Intelligent Robotics for Sustainable Disassembly</strong></h3>
+            <!--        Artificial Intelligence for Product Repairability and Collaborative Robot Disassembly -->
+            <div class="row my-3">
+                <div class="col-md-6">
+                    <img
+                        src="./assets/research/Fig1.jpg"
+                        class="img-fluid rounded shadow-sm mb-3"
+                        alt="Repairability" />
+                </div>
+                <div class="col-md-6">
+                    <img
+                        src="./assets/research/Fig2.jpg"
+                        class="img-fluid rounded shadow-sm mb-3"
+                        alt="Disassembly scoring framework" />
+                </div>
+            </div>
+            <p>
+                My research applies AI to improve repairability and robotic disassembly in remanufacturing systems as
+                part of a circular economy.
+            </p>
+            <ul>
+                <li>
+                    <strong>Robotic Disassembly Planning:</strong> Designed a scoring framework to evaluate robotic
+                    feasibility based on component weight, size, shape, accessibility, and positioning. Used MaxViT for
+                    visual estimation and to recommend human–robot collaboration levels.
+                </li>
+                <li>
+                    <strong>Repairability Prediction:</strong> Developed supervised and unsupervised learning models
+                    using teardown images to score the repairability of electronic products. Techniques include object
+                    detection (ConvNeXt, ResNet50, VGG16) and clustering (ORB + k-means) to uncover design patterns.
+                </li>
+            </ul>
+            <p>These tools support more efficient and scalable remanufacturing decisions.</p>
         </div>
-    </nav>
-    <div class="container mt-5">
-        <h3><strong>Artificial Intelligence for Product Repairability and Collaborative Robot Disassembly
-        </strong></h3>
-        <div class="row my-3">
-            <div class="col-md-6"> <img src="./assets/research/Fig1.jpg" class="img-fluid rounded shadow-sm mb-3" alt="Repairability"> </div>
-            <div class="col-md-6"> <img src="./assets/research/Fig2.jpg" class="img-fluid rounded shadow-sm mb-3" alt="Disassembly scoring framework"> </div>
+        <div class="container mt-5">
+            <h3><strong>Intelligent Risk Analysis and Mitigation in Robotics</strong></h3>
+            <div class="row my-3">
+                <div class="col-md-6">
+                    <img
+                        src="./assets/research/Fig3.jpg"
+                        class="img-fluid rounded shadow-sm mb-3"
+                        alt="Repairability" />
+                </div>
+                <div class="col-md-6">
+                    <img
+                        src="./assets/research/Fig4.jpg"
+                        class="img-fluid rounded shadow-sm mb-3"
+                        alt="Disassembly scoring framework" />
+                </div>
+            </div>
+            <p>
+                This research focuses on enhancing operator safety and risk awareness for the applications of
+                collaborative robotic disassembly tasks.
+            </p>
+            <ul>
+                <li>
+                    <strong>Motion Uncertainty Modeling:</strong> Developed deep learning models (LSTM-Bagging,
+                    GRU-Bagging, BNN-MCD) to predict ranges of hand motion trajectories using IMU data from desktop
+                    disassembly tasks. This enhances safety margins by modeling uncertainty rather than single-point
+                    predictions.
+                </li>
+                <li>
+                    <strong>Vision-Based Motion Forecasting:</strong> Designed a hybrid system that combines ConvLSTM
+                    (for future-frame generation) and YOLO (for real-time hand detection) on projected human movement.
+                </li>
+            </ul>
+            <p>These tools support intelligent risk mitigation in remanufacturing environments.</p>
         </div>
-        <p> This research leverages artificial intelligence to enhance sustainability through two key areas: automated repairability assessment and collaborative robot disassembly planning. For repairability evaluation, we developed supervised and unsupervised learning frameworks based on teardown images of consumer electronics. The supervised approach uses object detection and transfer learning with architectures like ConvNeXt, ResNet50, and VGG16 to generate repairability scores. The unsupervised method applies ORB feature extraction and k-means clustering to identify design similarities across devices.
-            <br>
-            <br> In parallel, we proposed a disassembly scoring framework to assess robotic feasibility for component disassembly based on five design-related factors: weight, shape, size, accessibility, and positioning. Using vision models like MaxViT, we estimate component dimensions and determine suitable work settings—ranging from full human-robot collaboration to robot-only scenarios. These efforts support safer, more efficient disassembly processes and enable scalable decision-making in remanufacturing. </p>
-    </div>
-    <div class="container mt-5">
-        <h3><strong>Intelligent Risk Analysis and Mitigation in Robotics</strong></h3>
-        <div class="row my-3">
-            <div class="col-md-6"> <img src="./assets/research/Fig3.jpg" class="img-fluid rounded shadow-sm mb-3" alt="Repairability"> </div>
-            <div class="col-md-6"> <img src="./assets/research/Fig4.jpg" class="img-fluid rounded shadow-sm mb-3" alt="Disassembly scoring framework"> </div>
+        <div class="container mt-5">
+            <h3><strong>Task Allocation in Human-Robot Collaboration</strong></h3>
+            <div class="row my-3">
+                <div class="col-md-6">
+                    <img
+                        src="./assets/research/Fig5.jpg"
+                        class="img-fluid rounded shadow-sm mb-3"
+                        alt="Repairability" />
+                </div>
+                <div class="col-md-6">
+                    <img
+                        src="./assets/research/Fig6.jpg"
+                        class="img-fluid rounded shadow-sm mb-3"
+                        alt="Disassembly scoring framework" />
+                </div>
+            </div>
+            <p>
+                This research develops a decision-making framework to optimize disassembly task allocation between human
+                operators and robots, supporting sustainable remanufacturing.
+            </p>
+            <ul>
+                <li>
+                    <strong>Multi-Attribute Utility Modeling:</strong> Introduced a utility-based model that considers
+                    disassembly cost, task complexity, and safety, while incorporating uncertainty using Beta
+                    distributions.
+                </li>
+                <li>
+                    <strong>Intelligent Task Assignment:</strong> Tasks are allocated based on disassembleability,
+                    safety index, and cost profile, identifying optimal human–robot collaboration strategies.
+                </li>
+            </ul>
+            <p>
+                This work supports the development of adaptive, cost-effective, and safe disassembly systems for future
+                remanufacturing environments.
+            </p>
         </div>
-        <p> This research focuses on enhancing operator safety and risk awareness in human-robot collaboration during disassembly operations. To address the challenge of predicting human hand movements in close proximity to robots, we develop deep learning-based frameworks that estimate a range of possible hand motion trajectories rather than point-by-point predictions. Using IMU data from desktop disassembly activities, we evaluate LSTM-Bagging, GRU-Bagging, and Bayesian Neural Network with Monte Carlo Dropout (BNN-MCD) to model motion uncertainty and improve safety margins.
-            <br>
-            <br> In a complementary approach, we propose a hybrid vision-based prediction system combining ConvLSTM and YOLO. ConvLSTM is trained to generate future-frame images from disassembly videos, while YOLO is applied to detect human hands in those predicted frames. This integrated model anticipates human motion in real time and enables robots to dynamically adjust their behavior based on operator position and movement. Together, these efforts support intelligent risk mitigation strategies in collaborative robotic systems used in remanufacturing environments. </p>
-    </div>
-    <div class="container mt-5">
-        <h3><strong>Human-Robot Collaboration in Sustainable Manufacturing</strong></h3>
-        <div class="row my-3">
-            <div class="col-md-6"> <img src="./assets/research/Fig5.jpg" class="img-fluid rounded shadow-sm mb-3" alt="Repairability"> </div>
-            <div class="col-md-6"> <img src="./assets/research/Fig6.jpg" class="img-fluid rounded shadow-sm mb-3" alt="Disassembly scoring framework"> </div>
-        </div>
-        <p> This research focuses on optimizing disassembly operations through human-robot collaboration to advance sustainable manufacturing practices. We propose a decision-making framework that jointly considers disassembly cost, operational complexity, and worker safety—three essential factors for dismantling end-of-life (EOL) products. A multi-attribute utility model is developed to address uncertainty in disassembly time and task feasibility, incorporating probabilistic modeling using Beta distributions.
-            <br>
-            <br> The framework intelligently allocates disassembly tasks between the human operator and the robot based on each task’s disassembleability, safety index, and cost profile. A case study on desktop computer disassembly demonstrates the approach, revealing that the model effectively identifies optimal sequences and task assignments that minimize cost, enhance robotic feasibility, and ensure a safer work environment. This contributes to the development of adaptive, efficient, and safe hybrid disassembly systems for remanufacturing. </p>
-    </div>
-    <div class="container mt-5">
-        <h3><strong>Artifical Intellegience for Ecosystem Services</strong></h3>
-        <div class="row my-3">
-            <div class="col-md-6 mx-auto text-center"> <img src="./assets/research/Fig7.jpg" class="img-fluid rounded shadow-sm mb-3 d-block mx-auto" alt="Repairability"> </div>
-        </div>
-        <p> This research investigates the application of artificial intelligence, particularly deep learning and vision-language models, to support the analysis of ecosystem services. We develop GeoAI pipelines that integrate image-based data with multimodal inputs to assess cultural ecosystem services such as recreation, aesthetic value, and cultural significance.
-            <br>
-            <br> Leveraging models like Contrastive Language–Image Pre-training and Large Foundation Models, we build classifiers and retrieval systems that can automatically identify cultural ecosystem services. These tools enable scalable, data-driven assessment of ecosystem functions across diverse geographic contexts. The approach enhances decision support in environmental planning, conservation policy, and land management by quantifying human-nature interactions through AI. </p>
-    </div>
-    <footer class="bg-dark text-white text-center py-3 mt-5"> &copy; 2025 All rights reserved. </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+        <div class="container mt-5">
+            <h3><strong>Geospatial Artificial Intelligence for Ecosystem Services</strong></h3>
+            <div class="row my-3">
+                <div class="col-md-6 mx-auto text-center">
+                    <img
+                        src="./assets/research/Fig7.jpg"
+                        class="img-fluid rounded shadow-sm mb-3 d-block mx-auto"
+                        alt="Repairability" />
+                </div>
+            </div>
+            <p>
+                This research applies deep learning and vision-language models to assess cultural ecosystem services
+                such as recreation, aesthetics, and cultural value.
+            </p>
 
+            <ul>
+                <li>
+                    <strong>Multimodal Pipelines:</strong> Integrated image-based and textual data to map human–nature
+                    interactions across landscapes.
+                </li>
+
+                <li>
+                    <strong>Foundation Models:</strong> Used Contrastive Language–Image Pre-training (CLIP) and other
+                    large vision-language models for service classification and retrieval.
+                </li>
+
+                <li>
+                    <strong>Scalable Environmental Assessment:</strong> Enables data-driven decision support for
+                    conservation, planning, and land management across diverse regions.
+                </li>
+            </ul>
+
+            <p>This work advances scalable and interpretable tools for understanding ecosystem functions using AI.</p>
+        </div>
+        <footer class="bg-dark text-white text-center py-3 mt-5">&copy; 2025 All rights reserved.</footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
 </html>

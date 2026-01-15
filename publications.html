@@ -5,31 +5,31 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Publications | Sustainable Intelligence Systems</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="assets/css/style.css" />
         <style>
             body {
                 padding-top: 70px;
                 /* Adjust if your navbar is taller */
             }
         </style>
+                <script>
+            fetch("navbar.html")
+                .then((res) => res.text())
+                .then((html) => {
+                    document.getElementById("navbar-placeholder").innerHTML = html;
+
+                    const current = location.pathname.split("/").pop() || "index.html";
+                    document.querySelectorAll(".navbar-nav .nav-link, .navbar-nav .dropdown-item").forEach((link) => {
+                        if (link.getAttribute("href") === current) {
+                            link.classList.add("active");
+                        }
+                    });
+                });
+        </script>
     </head>
 
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">Sustainable Intelligence Systems</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="publications.html">Publications</a></li>
-                        <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
-                        <li class="nav-item"><a class="nav-link" href="teaching.html">Teaching</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <div id="navbar-placeholder"></div>
         <div class="container mt-4">
             <div class="mb-5">
                 <h4>Journal Articles</h4>
@@ -243,7 +243,7 @@
                 </ul>
             </div>
         </div>
-        <footer class="bg-dark text-white text-center py-3 mt-5">&copy; 2025 All rights reserved.</footer>
+        <footer class="bg-dark text-white text-center py-3 mt-5">&copy; 2026 All rights reserved.</footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>

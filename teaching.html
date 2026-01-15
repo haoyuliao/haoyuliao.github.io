@@ -1,159 +1,166 @@
 <!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Teaching | Sustainable Intelligence Systems</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <style>
+            body {
+                padding-top: 70px;
+                /* Adjust if your navbar is taller */
+            }
+        </style>
+                <script>
+            fetch("navbar.html")
+                .then((res) => res.text())
+                .then((html) => {
+                    document.getElementById("navbar-placeholder").innerHTML = html;
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Teaching | Sustainable Intelligence Systems</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <style>
-        body {
-            padding-top: 70px;
-            /* Adjust if your navbar is taller */
-        }
+                    const current = location.pathname.split("/").pop() || "index.html";
+                    document.querySelectorAll(".navbar-nav .nav-link, .navbar-nav .dropdown-item").forEach((link) => {
+                        if (link.getAttribute("href") === current) {
+                            link.classList.add("active");
+                        }
+                    });
+                });
+        </script>
+    </head>
 
-    </style>
-</head>
-
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Sustainable Intelligence Systems</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
-                    <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="teaching.html">Teaching</a></li>
+    <body>
+        <div id="navbar-placeholder"></div>
+        <div class="container mt-4">
+            <h2 class="mb-4">Teaching Experience</h2>
+            <div class="mb-4">
+                <ul>
+                    <li>
+                        <strong>Teaching Assistant</strong>, Environmental Engineering Sciences, University of Florida,
+                        Gainesville, FL (2023)
+                        <ul>
+                            <li>
+                                <strong>Course:</strong> <i>ENV 4601</i> Environmental Resources Management
+                                <a
+                                    href="./assets/teaching/ENV%204601_Environmental%20Resources%20Mgt_Syllabus_F2023.pdf"
+                                    target="_blank"
+                                    >[Syllabus]</a
+                                >
+                            </li>
+                            <li>Graded assignments.</li>
+                            <li>Taught undergraduate courses when needed.</li>
+                            <li>Prepared solutions for each assignment and supervised exams.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Guest Lecturer</strong>, Environmental Engineering Sciences, University of Florida,
+                        Gainesville, FL (2022)
+                        <ul>
+                            <li>
+                                <strong>Course:</strong> <i>ENV 6932</i> System Analysis for Sustainable Design and
+                                Lifecycle Decisions
+                                <a href="./assets/teaching/ENV_6932_Syllabus_F2022_LC_080822.pdf" target="_blank"
+                                    >[Syllabus]</a
+                                >
+                            </li>
+                            <li>
+                                Presented the lecture for multi-attribute utility function, frequency analysis, and the
+                                house of quality (product planning matrix).
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Guest Lecturer</strong>, Environmental Engineering Sciences, University of Florida,
+                        Gainesville, FL (2021)
+                        <ul>
+                            <li>
+                                <strong>Course:</strong> <i>ENV 6932</i> Artificial Intelligence and Machine Learning
+                                with Engineering Applications
+                            </li>
+                            <li>
+                                Presented the technical modules on supervised learning algorithms and AI-driven
+                                decision-making in environmental systems.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Teaching Assistant</strong>, Bioenvironmental Systems Engineering, National Taiwan
+                        University, Taipei, Taiwan (2014)
+                        <ul>
+                            <li><strong>Course:</strong> Special Topics on Bioenvironmental Systems Engineering</li>
+                            <li>Graded assignments.</li>
+                            <li>Assisted invited speakers for each seminar.</li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
+            <h3 class="mb-3">Mentoring Experience</h3>
+            <div class="mb-4">
+                <ul>
+                    <li>
+                        <strong>Active Learning Program (ALP) Spring 2025 Intern</strong>, University of Florida
+                        <ul>
+                            <li>
+                                Mentored undergraduate students for the project: Bootstrap responsive website
+                                development.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Active Learning Program (ALP) Fall 2024 Intern</strong>, University of Florida
+                        <ul>
+                            <li>Mentored undergraduate students for the fgitollowing projects:</li>
+                            <li>
+                                Project 1: Manual data annotation of urban tree canopy on NAIP aerial images for
+                                regulation services.
+                            </li>
+                            <li>
+                                Project 2: Image labeling and classification of Flickr photos for cultural service
+                                assessment using LabelMe.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>High School Mentorship</strong>, (2023–2024)
+                        <ul>
+                            <li>
+                                Research Project:
+                                <strong
+                                    >Leveraging Machine Learning for Accurate Classification of Tennis Skill Levels and
+                                    Training Phases</strong
+                                >
+                            </li>
+                            <li>
+                                Mentored a high school student who received recognition at the symposium for outstanding
+                                performance:
+                                <ul>
+                                    <li>
+                                        State Recognition Award in Florida Junior Science and Humanities Symposium
+                                        (JSHS), 2024
+                                    </li>
+                                    <li>
+                                        First place in the computer science category at the 2024 Alachua County Science
+                                        Fair, 2024
+                                    </li>
+                                    <li>
+                                        Finalist in the 2024 Florida State Science and Engineering Fair (SSEF), 2024
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong>Guided the student in writing a peer-reviewed publication</strong>:
+                                <a href="https://doi.org/10.36838/v7i4.1" target="_blank"
+                                    >International Journal of High School Research</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <br />
+            <br />
+            <br />
         </div>
-    </nav>
-    <div class="container mt-4">
-        <h2 class="mb-4">Teaching Experience</h2>
-        <div class="mb-4">
-            <ul>
-                <li>
-                    <strong>Teaching Assistant</strong>, Environmental Engineering Sciences, University of Florida,
-                    Gainesville, FL (2023)
-                    <ul>
-                        <li>
-                            <strong>Course:</strong> <i>ENV 4601</i> Environmental Resources Management
-                            <a href="./assets/teaching/ENV%204601_Environmental%20Resources%20Mgt_Syllabus_F2023.pdf" target="_blank">[Syllabus]</a>
-                        </li>
-                        <li>Graded assignments.</li>
-                        <li>Taught undergraduate courses when needed.</li>
-                        <li>Prepared solutions for each assignment and supervised exams.</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Guest Lecturer</strong>, Environmental Engineering Sciences, University of Florida,
-                    Gainesville, FL (2022)
-                    <ul>
-                        <li>
-                            <strong>Course:</strong> <i>ENV 6932</i> System Analysis for Sustainable Design and
-                            Lifecycle Decisions
-                            <a href="./assets/teaching/ENV_6932_Syllabus_F2022_LC_080822.pdf" target="_blank">[Syllabus]</a>
-                        </li>
-                        <li>
-                            Presented the lecture for multi-attribute utility function, frequency analysis, and the
-                            house of quality (product planning matrix).
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Guest Lecturer</strong>, Environmental Engineering Sciences, University of Florida,
-                    Gainesville, FL (2021)
-                    <ul>
-                        <li>
-                            <strong>Course:</strong> <i>ENV 6932</i> Artificial Intelligence and Machine Learning
-                            with Engineering Applications
-                        </li>
-                        <li>
-                            Presented the technical modules on supervised learning algorithms and AI-driven
-                            decision-making in environmental systems.
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Teaching Assistant</strong>, Bioenvironmental Systems Engineering, National Taiwan
-                    University, Taipei, Taiwan (2014)
-                    <ul>
-                        <li><strong>Course:</strong> Special Topics on Bioenvironmental Systems Engineering</li>
-                        <li>Graded assignments.</li>
-                        <li>Assisted invited speakers for each seminar.</li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <h3 class="mb-3">Mentoring Experience</h3>
-        <div class="mb-4">
-            <ul>
-                <li>
-                    <strong>Active Learning Program (ALP) Spring 2025 Intern</strong>, University of Florida
-                    <ul>
-                        <li>
-                            Mentored undergraduate students for the project: Bootstrap responsive website
-                            development.
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Active Learning Program (ALP) Fall 2024 Intern</strong>, University of Florida
-                    <ul>
-                        <li>Mentored undergraduate students for the fgitollowing projects:</li>
-                        <li>
-                            Project 1: Manual data annotation of urban tree canopy on NAIP aerial images for
-                            regulation services.
-                        </li>
-                        <li>
-                            Project 2: Image labeling and classification of Flickr photos for cultural service
-                            assessment using LabelMe.
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>High School Mentorship</strong>, (2023–2024)
-                    <ul>
-                        <li>
-                            Research Project:
-                            <strong>Leveraging Machine Learning for Accurate Classification of Tennis Skill Levels and
-                                Training Phases</strong>
-                        </li>
-                        <li>
-                            Mentored a high school student who received recognition at the symposium for outstanding
-                            performance:
-                            <ul>
-                                <li>
-                                    State Recognition Award in Florida Junior Science and Humanities Symposium
-                                    (JSHS), 2024
-                                </li>
-                                <li>
-                                    First place in the computer science category at the 2024 Alachua County Science
-                                    Fair, 2024
-                                </li>
-                                <li>
-                                    Finalist in the 2024 Florida State Science and Engineering Fair (SSEF), 2024
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>Guided the student in writing a peer-reviewed publication</strong>:
-                            <a href="https://doi.org/10.36838/v7i4.1" target="_blank">International Journal of High School Research</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <br />
-        <br />
-        <br />
-    </div>
-    <footer class="bg-dark text-white text-center py-3 mt-5">&copy; 2025 All rights reserved.</footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
+        <footer class="bg-dark text-white text-center py-3 mt-5">&copy; 2026 All rights reserved.</footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
 </html>

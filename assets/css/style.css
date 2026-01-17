@@ -16,3 +16,14 @@ html[data-bs-theme="dark"] .navbar {
 html[data-bs-theme="dark"] footer {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
+
+/* Fix outline-dark buttons in dark mode */
+html[data-bs-theme="dark"] .btn-outline-dark {
+    color: #f8f9fa;
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+html[data-bs-theme="dark"] .btn-outline-dark:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}

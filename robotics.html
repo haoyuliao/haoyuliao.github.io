@@ -3,36 +3,31 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Projects | Sustainable Intelligence Systems</title>
+        <title>Projects | Sustainable Intelligent Systems</title>
+
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="assets/css/style.css" />
+
         <style>
             body {
                 padding-top: 70px;
-                /* Adjust if your navbar is taller */
             }
         </style>
-        <script>
-            fetch("navbar.html")
-                .then((res) => res.text())
-                .then((html) => {
-                    document.getElementById("navbar-placeholder").innerHTML = html;
 
-                    const current = location.pathname.split("/").pop() || "index.html";
-                    document.querySelectorAll(".navbar-nav .nav-link, .navbar-nav .dropdown-item").forEach((link) => {
-                        if (link.getAttribute("href") === current) {
-                            link.classList.add("active");
-                        }
-                    });
-                });
+        <!-- Set theme early to avoid flash -->
+        <script>
+            (() => {
+                const t = localStorage.getItem("theme");
+                if (t) document.documentElement.setAttribute("data-bs-theme", t);
+            })();
         </script>
     </head>
 
     <body>
         <div id="navbar-placeholder"></div>
+
         <div class="container mt-5">
             <h3><strong>Intelligent Robotics for Sustainable Disassembly</strong></h3>
-            <!--        Artificial Intelligence for Product Repairability and Collaborative Robot Disassembly -->
             <div class="row my-3">
                 <div class="col-md-6">
                     <img
@@ -64,7 +59,23 @@
                 </li>
             </ul>
             <p>These tools support more efficient and scalable remanufacturing decisions.</p>
+
+            <h5 class="mt-4">Related Publications</h5>
+            <ul class="ps-3">
+                <li>
+                    <a href="https://doi.org/10.1115/1.4068476" target="_blank">
+                        A Disassembly Scoring Framework for Human–Robot Collaboration Based on Robotic Capabilities.
+                    </a>
+                </li>
+                <li>
+                    <a href="https://doi.org/10.1115/1.4063561" target="_blank">
+                        Automated evaluation and rating of product repairability using artificial intelligence-based
+                        approaches.
+                    </a>
+                </li>
+            </ul>
         </div>
+
         <div class="container mt-5">
             <h3><strong>Intelligent Risk Analysis and Mitigation in Robotics</strong></h3>
             <div class="row my-3">
@@ -72,13 +83,13 @@
                     <img
                         src="./assets/research/Fig3.jpg"
                         class="img-fluid rounded shadow-sm mb-3"
-                        alt="Repairability" />
+                        alt="Risk analysis figure" />
                 </div>
                 <div class="col-md-6">
                     <img
                         src="./assets/research/Fig4.jpg"
                         class="img-fluid rounded shadow-sm mb-3"
-                        alt="Disassembly scoring framework" />
+                        alt="Motion forecasting figure" />
                 </div>
             </div>
             <p>
@@ -89,8 +100,7 @@
                 <li>
                     <strong>Motion Uncertainty Modeling:</strong> Developed deep learning models (LSTM-Bagging,
                     GRU-Bagging, BNN-MCD) to predict ranges of hand motion trajectories using IMU data from desktop
-                    disassembly tasks. This enhances safety margins by modeling uncertainty rather than single-point
-                    predictions.
+                    disassembly tasks.
                 </li>
                 <li>
                     <strong>Vision-Based Motion Forecasting:</strong> Designed a hybrid system that combines ConvLSTM
@@ -98,7 +108,28 @@
                 </li>
             </ul>
             <p>These tools support intelligent risk mitigation in remanufacturing environments.</p>
+
+            <h5 class="mt-4">Related Publications</h5>
+            <ul class="ps-3">
+                <li>
+                    <a href="https://doi.org/10.1016/j.apergo.2023.104090" target="_blank">
+                        Human Activity Recognition in an End-Of-Life Consumer Electronics Disassembly Task
+                    </a>
+                </li>
+                <li>
+                    <a href="https://doi.org/10.1115/1.4067987" target="_blank">
+                        Forecasting the Range of Possible Human Hand Movement in Consumer Electronics Disassembly Using
+                        Machine Learning
+                    </a>
+                </li>
+                <li>
+                    <a href="https://doi.org/10.1115/DETC2022-89967" target="_blank">
+                        Human Hand Motion Prediction in Disassembly Operation
+                    </a>
+                </li>
+            </ul>
         </div>
+
         <div class="container mt-5">
             <h3><strong>Task Allocation in Human-Robot Collaboration</strong></h3>
             <div class="row my-3">
@@ -106,13 +137,13 @@
                     <img
                         src="./assets/research/Fig5.jpg"
                         class="img-fluid rounded shadow-sm mb-3"
-                        alt="Repairability" />
+                        alt="Task allocation figure" />
                 </div>
                 <div class="col-md-6">
                     <img
                         src="./assets/research/Fig6.jpg"
                         class="img-fluid rounded shadow-sm mb-3"
-                        alt="Disassembly scoring framework" />
+                        alt="Human-robot collaboration figure" />
                 </div>
             </div>
             <p>
@@ -130,46 +161,40 @@
                     safety index, and cost profile, identifying optimal human–robot collaboration strategies.
                 </li>
             </ul>
-            <p>
-                This work supports the development of adaptive, cost-effective, and safe disassembly systems for future
-                remanufacturing environments.
-            </p>
-        </div>
-        <div class="container mt-5">
-            <h3><strong>Geospatial Artificial Intelligence for Ecosystem Services</strong></h3>
-            <div class="row my-3">
-                <div class="col-md-6 mx-auto text-center">
-                    <img
-                        src="./assets/research/Fig7.jpg"
-                        class="img-fluid rounded shadow-sm mb-3 d-block mx-auto"
-                        alt="Repairability" />
-                </div>
-            </div>
-            <p>
-                This research applies deep learning and vision-language models to assess cultural ecosystem services
-                such as recreation, aesthetics, and cultural value.
-            </p>
 
-            <ul>
+            <h5 class="mt-4">Related Publications</h5>
+            <ul class="ps-3">
                 <li>
-                    <strong>Multimodal Pipelines:</strong> Integrated image-based and textual data to map human–nature
-                    interactions across landscapes.
-                </li>
-
-                <li>
-                    <strong>Foundation Models:</strong> Used Contrastive Language–Image Pre-training (CLIP) and other
-                    large vision-language models for service classification and retrieval.
-                </li>
-
-                <li>
-                    <strong>Scalable Environmental Assessment:</strong> Enables data-driven decision support for
-                    conservation, planning, and land management across diverse regions.
+                    <a href="https://doi.org/10.1016/j.apergo.2023.104090" target="_blank">
+                        Optimization-Based Disassembly Sequence Planning Under Uncertainty for Human–Robot Collaboration
+                    </a>
                 </li>
             </ul>
-
-            <p>This work advances scalable and interpretable tools for understanding ecosystem functions using AI.</p>
         </div>
+
         <footer class="bg-dark text-white text-center py-3 mt-5">&copy; 2026 All rights reserved.</footer>
+
+        <!-- Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Theme logic -->
+        <script src="assets/js/theme.js"></script>
+
+        <!-- Load navbar + active link + theme button bind -->
+        <script>
+            fetch("navbar.html")
+                .then((res) => res.text())
+                .then((html) => {
+                    document.getElementById("navbar-placeholder").innerHTML = html;
+
+                    const current = location.pathname.split("/").pop() || "index.html";
+                    document.querySelectorAll(".navbar-nav .nav-link, .navbar-nav .dropdown-item").forEach((link) => {
+                        if (link.getAttribute("href") === current) link.classList.add("active");
+                    });
+
+                    if (window.initThemeToggle) window.initThemeToggle();
+                })
+                .catch(console.error);
+        </script>
     </body>
 </html>

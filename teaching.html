@@ -3,37 +3,47 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Teaching | Sustainable Intelligence Systems</title>
+        <title>Teaching | Sustainable Intelligent Systems</title>
+
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="assets/css/style.css" />
+
         <style>
             body {
                 padding-top: 70px;
-                /* Adjust if your navbar is taller */
             }
         </style>
-                <script>
-            fetch("navbar.html")
-                .then((res) => res.text())
-                .then((html) => {
-                    document.getElementById("navbar-placeholder").innerHTML = html;
 
-                    const current = location.pathname.split("/").pop() || "index.html";
-                    document.querySelectorAll(".navbar-nav .nav-link, .navbar-nav .dropdown-item").forEach((link) => {
-                        if (link.getAttribute("href") === current) {
-                            link.classList.add("active");
-                        }
-                    });
-                });
+        <!-- Set theme early to avoid flash -->
+        <script>
+            (() => {
+                const t = localStorage.getItem("theme");
+                if (t) document.documentElement.setAttribute("data-bs-theme", t);
+            })();
         </script>
     </head>
 
     <body>
         <div id="navbar-placeholder"></div>
+
         <div class="container mt-4">
             <h2 class="mb-4">Teaching Experience</h2>
+
             <div class="mb-4">
                 <ul>
+                    <li>
+                        <strong>Guest Lecturer</strong>, Environmental Engineering Sciences, University of Florida,
+                        Gainesville, FL (2025)
+                        <ul>
+                            <li><strong>Course:</strong> <i>AGR 6932</i> Geospatial AI for Sustainability Science</li>
+                            <li>
+                                Presented the lecture for Geo-visualization and Interactive Mapping including tools and
+                                techniques for 2D/3D mapping; interactive dashboards; story maps; digital twins for
+                                sustainability applications.
+                            </li>
+                        </ul>
+                    </li>
+
                     <li>
                         <strong>Teaching Assistant</strong>, Environmental Engineering Sciences, University of Florida,
                         Gainesville, FL (2023)
@@ -46,11 +56,13 @@
                                     >[Syllabus]</a
                                 >
                             </li>
-                            <li>Graded assignments.</li>
-                            <li>Taught undergraduate courses when needed.</li>
-                            <li>Prepared solutions for each assignment and supervised exams.</li>
+                            <li>
+                                Graded assignments, taught undergraduate courses, prepared assignment solutions, and
+                                supervised examinations.
+                            </li>
                         </ul>
                     </li>
+
                     <li>
                         <strong>Guest Lecturer</strong>, Environmental Engineering Sciences, University of Florida,
                         Gainesville, FL (2022)
@@ -68,6 +80,7 @@
                             </li>
                         </ul>
                     </li>
+
                     <li>
                         <strong>Guest Lecturer</strong>, Environmental Engineering Sciences, University of Florida,
                         Gainesville, FL (2021)
@@ -82,20 +95,32 @@
                             </li>
                         </ul>
                     </li>
+
                     <li>
                         <strong>Teaching Assistant</strong>, Bioenvironmental Systems Engineering, National Taiwan
                         University, Taipei, Taiwan (2014)
                         <ul>
                             <li><strong>Course:</strong> Special Topics on Bioenvironmental Systems Engineering</li>
-                            <li>Graded assignments.</li>
-                            <li>Assisted invited speakers for each seminar.</li>
+                            <li>Graded course assignments and assisted invited speakers for seminars.</li>
                         </ul>
                     </li>
                 </ul>
             </div>
+
             <h3 class="mb-3">Mentoring Experience</h3>
+
             <div class="mb-4">
                 <ul>
+                    <li>
+                        <strong>Active Learning Program (ALP) Summer 2025 Intern</strong>, University of Florida
+                        <ul>
+                            <li>
+                                Mentored undergraduate students for the project: Nationwide-scale image labeling for
+                                training ML models.
+                            </li>
+                        </ul>
+                    </li>
+
                     <li>
                         <strong>Active Learning Program (ALP) Spring 2025 Intern</strong>, University of Florida
                         <ul>
@@ -105,10 +130,11 @@
                             </li>
                         </ul>
                     </li>
+
                     <li>
                         <strong>Active Learning Program (ALP) Fall 2024 Intern</strong>, University of Florida
                         <ul>
-                            <li>Mentored undergraduate students for the fgitollowing projects:</li>
+                            <li>Mentored undergraduate students for the following projects:</li>
                             <li>
                                 Project 1: Manual data annotation of urban tree canopy on NAIP aerial images for
                                 regulation services.
@@ -119,8 +145,9 @@
                             </li>
                         </ul>
                     </li>
+
                     <li>
-                        <strong>High School Mentorship</strong>, (2023–2024)
+                        <strong>High School Mentorship</strong> (2023–2024)
                         <ul>
                             <li>
                                 Research Project:
@@ -130,8 +157,7 @@
                                 >
                             </li>
                             <li>
-                                Mentored a high school student who received recognition at the symposium for outstanding
-                                performance:
+                                Mentored a high school student who received recognition:
                                 <ul>
                                     <li>
                                         State Recognition Award in Florida Junior Science and Humanities Symposium
@@ -156,11 +182,31 @@
                     </li>
                 </ul>
             </div>
-            <br />
-            <br />
-            <br />
         </div>
+
         <footer class="bg-dark text-white text-center py-3 mt-5">&copy; 2026 All rights reserved.</footer>
+
+        <!-- Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Theme logic -->
+        <script src="assets/js/theme.js"></script>
+
+        <!-- Load navbar + active link + theme toggle bind -->
+        <script>
+            fetch("navbar.html")
+                .then((res) => res.text())
+                .then((html) => {
+                    document.getElementById("navbar-placeholder").innerHTML = html;
+
+                    const current = location.pathname.split("/").pop() || "index.html";
+                    document.querySelectorAll(".navbar-nav .nav-link, .navbar-nav .dropdown-item").forEach((link) => {
+                        if (link.getAttribute("href") === current) link.classList.add("active");
+                    });
+
+                    if (window.initThemeToggle) window.initThemeToggle();
+                })
+                .catch(console.error);
+        </script>
     </body>
 </html>

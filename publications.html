@@ -3,39 +3,46 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Publications | Sustainable Intelligence Systems</title>
+        <title>Publications | Sustainable Intelligent Systems</title>
+
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="assets/css/style.css" />
+
         <style>
             body {
-                padding-top: 70px;
-                /* Adjust if your navbar is taller */
+                padding-top: 70px; /* Adjust if your navbar is taller */
             }
         </style>
-                <script>
-            fetch("navbar.html")
-                .then((res) => res.text())
-                .then((html) => {
-                    document.getElementById("navbar-placeholder").innerHTML = html;
 
-                    const current = location.pathname.split("/").pop() || "index.html";
-                    document.querySelectorAll(".navbar-nav .nav-link, .navbar-nav .dropdown-item").forEach((link) => {
-                        if (link.getAttribute("href") === current) {
-                            link.classList.add("active");
-                        }
-                    });
-                });
+        <!-- Set theme early to avoid flash -->
+        <script>
+            (() => {
+                const t = localStorage.getItem("theme");
+                if (t) document.documentElement.setAttribute("data-bs-theme", t);
+            })();
         </script>
     </head>
 
     <body>
         <div id="navbar-placeholder"></div>
+
         <div class="container mt-4">
             <div class="mb-5">
                 <h4>Journal Articles</h4>
                 <ul class="ps-3">
                     <li>
-                        <strong>Liao, H.-Y.</strong>, Terrin, P., Petters, J. R., & Behdad, S. (2025).
+                        Song, J., Zhao, C., Oduor, K. T., <strong>Liao, H.-Y.</strong>, Tang, Z., Bretas, I. L., etc.
+                        (2025).
+                        <strong
+                            >Mapping invasive Opuntia stricta in Kenya’s Drylands using explainable machine learning
+                            with time-series remote sensing and geographic context.</strong
+                        >
+                        <em>International Journal of Applied Earth Observation and Geoinformation, 144, 104867.</em>
+                        <a href="https://doi.org/10.1016/j.jag.2025.104867" target="_blank">DOI</a>
+                    </li>
+
+                    <li>
+                        <strong>Liao, H.-Y.</strong>, Terrin, P., Petters, J. R., &amp; Behdad, S. (2025).
                         <strong
                             >A Disassembly Scoring Framework for Human–Robot Collaboration Based on Robotic
                             Capabilities.</strong
@@ -44,8 +51,9 @@
                         <a href="https://doi.org/10.1115/1.4068476" target="_blank">DOI</a
                         ><span class="fw-bold text-danger"> DFMLC Best Paper Award</span>
                     </li>
+
                     <li>
-                        <strong>Liao, H.-Y.</strong>, Chen, Y., Hu, B., Liang, X., & Behdad, S. (2025).
+                        <strong>Liao, H.-Y.</strong>, Chen, Y., Hu, B., Liang, X., &amp; Behdad, S. (2025).
                         <strong
                             >Forecasting the Range of Possible Human Hand Movement in Consumer Electronics Disassembly
                             Using Machine Learning.</strong
@@ -53,8 +61,9 @@
                         <em>Journal of Computing and Information Science in Engineering, 25(5)</em>, 051001.
                         <a href="https://doi.org/10.1115/1.4067987" target="_blank">DOI</a>
                     </li>
+
                     <li>
-                        <strong>Liao, H.-Y.</strong>, Esmaeilian, B., & Behdad, S. (2024).
+                        <strong>Liao, H.-Y.</strong>, Esmaeilian, B., &amp; Behdad, S. (2024).
                         <strong
                             >Automated evaluation and rating of product repairability using artificial
                             intelligence-based approaches.</strong
@@ -62,6 +71,7 @@
                         <em>Journal of Manufacturing Science and Engineering, 146(2)</em>.
                         <a href="https://doi.org/10.1115/1.4063561" target="_blank">DOI</a>
                     </li>
+
                     <li>
                         Chen, Y., <strong>Liao, H.-Y. (Co-first author)</strong>, Behdad, S., Hu, B. (2023).
                         <strong
@@ -70,8 +80,9 @@
                         <em>Applied Ergonomics</em>.
                         <a href="https://doi.org/10.1016/j.apergo.2023.104090" target="_blank">DOI</a>
                     </li>
+
                     <li>
-                        <strong>Liao, H.-Y.</strong>, Chen, Y., Hu, B., & Behdad, S. (2022).
+                        <strong>Liao, H.-Y.</strong>, Chen, Y., Hu, B., &amp; Behdad, S. (2022).
                         <strong
                             >Optimization-Based Disassembly Sequence Planning Under Uncertainty for Human–Robot
                             Collaboration.</strong
@@ -79,6 +90,7 @@
                         <em>Journal of Mechanical Design, 145(2)</em>.
                         <a href="https://doi.org/10.1115/1.4055901" target="_blank">DOI</a>
                     </li>
+
                     <li>
                         <strong>Liao, H.-Y.</strong>, Behdad, S. (2021).
                         <strong
@@ -87,6 +99,7 @@
                         <em>Resources, Conservation and Recycling</em>.
                         <a href="https://doi.org/10.1016/j.resconrec.2021.105609" target="_blank">DOI</a>
                     </li>
+
                     <li>
                         <strong>Liao, H.-Y.</strong>, Cade, W., Behdad, S. (2021).
                         <strong
@@ -96,19 +109,24 @@
                         <em>Journal of Manufacturing Science and Engineering, 144(3)</em>.
                         <a href="https://doi.org/10.1115/1.4051886" target="_blank">DOI</a>
                     </li>
+
                     <li>
                         Pan, T.-Y., Lin, H.-T., <strong>Liao, H.-Y.</strong> (2019).
                         <strong>A Data-Driven Probabilistic Rainfall-Inundation Model for Flash-Flood Warnings.</strong>
-                        <em>Water, 11</em>, 2534. <a href="https://doi.org/10.3390/w11122534" target="_blank">DOI</a>
+                        <em>Water, 11</em>, 2534.
+                        <a href="https://doi.org/10.3390/w11122534" target="_blank">DOI</a>
                     </li>
+
                     <li>
                         <strong>Liao, H.-Y.</strong>, Pan, T.-Y., Chang, H.-K., et al. (2019).
                         <strong
                             >Using Tabu Search Adjusted with Urban Sewer Flood Simulation to Improve Pluvial Flood
                             Warning.</strong
                         >
-                        <em>Water, 11</em>, 348. <a href="https://doi.org/10.3390/w11020348" target="_blank">DOI</a>
+                        <em>Water, 11</em>, 348.
+                        <a href="https://doi.org/10.3390/w11020348" target="_blank">DOI</a>
                     </li>
+
                     <li>
                         Chen, C.-K., Chang, M.-J., Chang, H.-K., <strong>Liao, H.-Y.</strong>, Cheng, Y.-F. (2019).
                         <strong
@@ -118,6 +136,7 @@
                         <em>Journal of Taiwan Agricultural Engineering</em>.
                         <a href="https://doi.org/10.29974/JTAE.201909_65(3).0006" target="_blank">DOI</a>
                     </li>
+
                     <li>
                         <strong>Liao, H.-Y.</strong>, Pan, T.-Y., Tan, Y.-C., Lai, J.-S., Su, M.-D. (2018).
                         <strong>Applying the Tabu Search to Optimize a Rainfall-Inundation Warning Threshold.</strong>
@@ -126,32 +145,62 @@
                     </li>
                 </ul>
             </div>
+
             <div class="mb-5">
                 <h4>Conference Proceedings (Peer-Reviewed Full Papers)</h4>
                 <ul class="ps-3">
                     <li>
-                        <strong>Liao, H.-Y.</strong>, Terrin, P., Petters, J. R., & Behdad, S. (2024).
+                        <strong>Liao, H.-Y.</strong>, C. Zhao, J. Song, and W. Shao. (2025).
                         <strong
-                            >A disassembly score for human-robot collaboration considering robots' capabilities.</strong
+                            >Mapping Cultural Ecosystem Services Using One-Shot In-Context Learning with Multimodal
+                            Large Language Models.</strong
+                        >
+                        <em
+                            >In Proceedings of the 33rd ACM International Conference on Advances in Geographic
+                            Information Systems, pp. 1071-1074</em
+                        >
+                        <a href="https://doi.org/10.1145/3748636.3764178" target="_blank">DOI</a>
+                    </li>
+
+                    <li>
+                        J. Song, <strong>H.-Y. Liao</strong>, C. Zhao, and W. Shao. (2025).
+                        <strong
+                            >FoundationSoil: Enhancing Soil Organic Carbon Mapping Using a Multi-Temporal Geospatial
+                            Foundation Model.</strong
+                        >
+                        <em
+                            >In Proceedings of the 33rd ACM International Conference on Advances in Geographic
+                            Information Systems, pp. 1067-1070</em
+                        >
+                        <a href="https://doi.org/10.1145/3748636.3764177" target="_blank">DOI</a>
+                    </li>
+
+                    <li>
+                        <strong>Liao, H.-Y.</strong>, Terrin, P., Petters, J. R., &amp; Behdad, S. (2024).
+                        <strong
+                            >A Disassembly Score for Human-Robot Collaboration Considering Robots' Capabilities.</strong
                         >
                         <em>ASME IDETC-CIE 2024</em>, Washington, DC, USA.
                         <a href="https://doi.org/10.1115/DETC2024-143517" target="_blank">DOI</a>
                     </li>
+
                     <li>
-                        <strong>Liao, H.-Y.</strong>, Chen, Y., Hu, B., Liang, X., & Behdad, S. (2023).
+                        <strong>Liao, H.-Y.</strong>, Chen, Y., Hu, B., Liang, X., &amp; Behdad, S. (2023).
                         <strong
-                            >Forecasting the range of possible human hand movement in consumer electronics disassembly
-                            using machine learning.</strong
+                            >Forecasting the Range of Possible Human Hand Movement in Consumer Electronics Disassembly
+                            Using Machine Learning.</strong
                         >
                         <em>ASME MSEC 2023</em>, New Brunswick, NJ, USA.
                         <a href="https://doi.org/10.1115/MSEC2023-104792" target="_blank">DOI</a>
                     </li>
+
                     <li>
                         <strong>Liao, H.-Y.</strong>, Behdad, S. (2022).
                         <strong>Human Hand Motion Prediction in Disassembly Operations.</strong>
                         <em>ASME IDETC-CIE 2022</em>, St. Louis, MO, USA.
                         <a href="https://doi.org/10.1115/DETC2022-89967" target="_blank">DOI</a>
                     </li>
+
                     <li>
                         <strong>Liao, H.-Y.</strong>, Chen, Y., Hu, B., Behdad, S. (2022).
                         <strong
@@ -161,12 +210,14 @@
                         <em>ASME MSEC 2022</em>, West Lafayette, IN, USA.
                         <a href="https://doi.org/10.1115/MSEC2022-85383" target="_blank">DOI</a>
                     </li>
+
                     <li>
                         <strong>Liao, H.-Y.</strong>, Cade, W., Behdad, S. (2021).
                         <strong>Machine Learning to Predict Medical Devices Repair and Maintenance Needs.</strong>
                         <em>ASME IDETC-CIE 2021</em>, Virtual.
                         <a href="https://doi.org/10.1115/DETC2021-71333" target="_blank">DOI</a>
                     </li>
+
                     <li>
                         Hu, S., Zhang, X., <strong>Liao, H.-Y.</strong>, Liang, X., Zheng, M., Behdad, S. (2021).
                         <strong
@@ -176,6 +227,7 @@
                         <em>ASME IDETC-CIE 2021</em>, Virtual.
                         <a href="https://doi.org/10.1115/DETC2021-71403" target="_blank">DOI</a>
                     </li>
+
                     <li>
                         <strong>Liao, H.-Y.</strong>, Cade, W., Behdad, S. (2021).
                         <strong
@@ -187,63 +239,135 @@
                     </li>
                 </ul>
             </div>
+
             <div class="mb-5">
                 <h4>Book Chapters</h4>
                 <ul class="ps-3">
                     <li>
-                        <strong>Liao, H.-Y.</strong>, Zhao, C. (2026).
-                        <strong>Data-Driven Earth Observation for Disaster Management.</strong> <em>Elsevier</em>.
-                        <em>Under review.</em>
+                        <strong>Liao, H.-Y.</strong>, Zhao, C. (2026). <strong>Ecosystem degradation.</strong>
+                        <em>Data-Driven Earth Observation for Disaster Management</em>. Elsevier, 303-325.
+                        <a href="https://doi.org/10.1016/B978-0-443-33803-8.00021-4" target="_blank">DOI</a>
                     </li>
+
                     <li>
-                        Esmaeilian, B., <strong>Liao, H.-Y.</strong>, & Behdad, S. (2025).
-                        <strong>Circular Economy through Blockchain and Data Analytics.</strong> In
-                        <em>Blockchain for Good</em>, CRC Press.
+                        Esmaeilian, B., <strong>Liao, H.-Y.</strong>, &amp; Behdad, S. (2025).
+                        <strong>Circular Economy through Blockchain and Data Analytics.</strong>
+                        In <em>Blockchain for Good</em>, CRC Press.
                         <a href="https://doi.org/10.1201/9781003456346-10" target="_blank">DOI</a>
                     </li>
                 </ul>
             </div>
+
             <div class="mb-5">
                 <h4>Conference Presentations</h4>
                 <ul class="ps-3">
+                    <li>
+                        <strong>Liao, H.-Y.</strong>, Zhao, C., Koylu, C., Cao, H., Qiu, J., Callaghan, C., Song, J.,
+                        Shao, W. (2025).
+                        <strong
+                            >Mapping Cultural Ecosystem Service Flows from Crowdsourced Imagery: A Zero-Shot Learning
+                            Approach with the Vision–Language Model CLIP.</strong
+                        >
+                        <em>American Geophysical Union (AGU) Fall Meeting</em>, New Orleans, LA, USA, Dec 11–19, 2025.
+                    </li>
+
                     <li>
                         Zhao, C., <strong>Liao, H.-Y.</strong>, Gogineni, D. C., Koylu, C. (2024).
                         <strong
                             >Mapping Flows of Nature-based Outdoor Recreational Services at Large-scale based on
                             Crowdsourced Data and Multimodal Learning.</strong
                         >
-                        <em>ACES Conference</em>, Austin, TX, USA, Dec 9–12.
+                        <em>A Community on Ecosystem Services (ACES) Conference</em>, Austin, TX, USA, Dec 9–12, 2024.
                     </li>
+
                     <li>
                         <strong>Liao, H.-Y.</strong>, Zhao, C. (2024).
                         <strong
                             >Advancing Ecosystem Services Assessment Through Geospatial Artificial Intelligence (GeoAI):
                             A Comprehensive Review and Future Directions.</strong
                         >
-                        <em>Symposium on Spatiotemporal Data Science</em>, Virginia Tech, VA, USA, Jul 23–24.
+                        <em>Symposium on Spatiotemporal Data Science</em>, Virginia Tech Research Center, VA, USA, Jul
+                        23–24, 2024.
+                        <a href="https://stds2024.stcenter.net/index.php/test/#CLT-1-i" target="_blank">Link</a>
                     </li>
+
                     <li>
                         <strong>Liao, H.-Y.</strong>, Behdad, S. (2023).
-                        <strong>An Artificial Intelligence-Based Framework to Assess Product Repairability.</strong>
-                        <em>Production and Operations Management Society (POMS)</em>, Orlando, FL, USA, May 25.
+                        <strong>An artificial intelligence-based framework to assess product repairability.</strong>
+                        <em>Production and Operations Management Society (POMS)</em>, Orlando, FL, USA, May 25, 2023.
+                        <a href="https://pomsmeetings.org/conf-2023/documents/Full-Schedule-PDF.pdf" target="_blank"
+                            >Link</a
+                        >
                     </li>
+
                     <li>
                         <strong>Liao, H.-Y.</strong>, Behdad, S. (2021).
                         <strong>Deep Transfer Learning to Evaluate Product Repairability.</strong>
-                        <em>INFORMS Annual Meeting</em>, Anaheim, CA, Oct 24–27.
+                        <em>INFORMS Annual Meeting</em>, Anaheim, CA, USA, Oct 24–27, 2021.
                     </li>
+
                     <li>
                         <strong>Liao, H.-Y.</strong>, Cade, W., Behdad, S. (2020).
                         <strong
                             >Machine Learning, Frequency Analysis and Markov Chain Model for Analyzing Product Repair
                             and Maintenance Service Decisions.</strong
                         >
-                        <em>ASME IDETC-CIE 2020</em>, Virtual Presentation.
+                        <em>ASME IDETC/CIE</em>, Virtual technical presentation, 2020.
+                        <a
+                            href="https://event.asme.org/Events/media/library/resources/idetc-cie/IDETC-Virtual-Technical-Session-Breakdown.pdf"
+                            target="_blank"
+                            >Link</a
+                        >
+                    </li>
+
+                    <li>
+                        Lin, Y.-J., <strong>Liao, H.-Y.</strong>, Chang, H.-K., Shang, R.-K., Kuo, H.-C., Lai, J.-S.,
+                        Tan, Y.-C. (2017).
+                        <strong
+                            >A Web-Based Tamsui River Flood Early-Warning System with Correction of Real-Time Water
+                            Stage Using Monitoring Data.</strong
+                        >
+                        <em>American Geophysical Union (AGU) Fall Meeting</em>, New Orleans, LA, USA, Dec 11–15, 2017.
+                        <a href="https://ui.adsabs.harvard.edu/abs/2017AGUFMNH41A0150L" target="_blank">[Link]</a>
+                    </li>
+
+                    <li>
+                        <strong>Liao, H.-Y.</strong>, Pan, T.-Y., Su, M.-D., Hsieh, M.-C., Tan, Y.-C. (2016).
+                        <strong
+                            >Optimization of Rainfall Thresholds for a Flood Warning System to Taiwan Urban Areas During
+                            Storm Events.</strong
+                        >
+                        <em>European Geosciences Union (EGU) General Assembly</em>, Vienna, Austria, Apr 17–22, 2016.
+                        <a href="https://ui.adsabs.harvard.edu/abs/2016EGUGA..1810875L" target="_blank">Link</a>
                     </li>
                 </ul>
             </div>
         </div>
+
         <footer class="bg-dark text-white text-center py-3 mt-5">&copy; 2026 All rights reserved.</footer>
+
+        <!-- Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Theme logic (defines window.initThemeToggle) -->
+        <script src="assets/js/theme.js"></script>
+
+        <!-- Load navbar (then call initThemeToggle) -->
+        <script>
+            fetch("navbar.html")
+                .then((res) => res.text())
+                .then((html) => {
+                    document.getElementById("navbar-placeholder").innerHTML = html;
+
+                    const current = location.pathname.split("/").pop() || "index.html";
+                    document.querySelectorAll(".navbar-nav .nav-link, .navbar-nav .dropdown-item").forEach((link) => {
+                        if (link.getAttribute("href") === current) link.classList.add("active");
+                    });
+
+                    // bind theme toggle after navbar injected
+                    if (window.initThemeToggle) window.initThemeToggle();
+                })
+                .catch(console.error);
+        </script>
     </body>
 </html>

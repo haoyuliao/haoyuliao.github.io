@@ -27,111 +27,178 @@
         <div id="navbar-placeholder"></div>
 
         <div class="container mt-5">
-            <h3><strong>Intelligent Robotics for Sustainable Disassembly</strong></h3>
+            <h3><strong>Mapping Cultural Ecosystem Services Using Social Media and Foundation Models</strong></h3>
+
             <div class="row my-3">
-                <div class="col-md-6">
-                    <img
-                        src="./assets/research/Fig1.jpg"
-                        class="img-fluid rounded shadow-sm mb-3"
-                        alt="Repairability" />
+                <div class="col-md-7 d-flex">
+                    <img src="./assets/research/Fig10.jpg" class="img-fluid rounded shadow-sm" alt="CES flow mapping" />
                 </div>
-                <div class="col-md-6">
-                    <img
-                        src="./assets/research/Fig2.jpg"
-                        class="img-fluid rounded shadow-sm mb-3"
-                        alt="Disassembly scoring framework" />
+                <div class="col-md-5 d-flex">
+                    <img src="./assets/research/PUDs_GIF.gif" class="img-fluid rounded shadow-sm" alt="CES hotspots" />
                 </div>
             </div>
+
             <p>
-                My research applies AI to improve repairability and robotic disassembly in remanufacturing systems as
-                part of a circular economy.
+                Mapping <strong>Cultural Ecosystem Services (CES) flows</strong>, including outdoor recreation, wildlife
+                viewing, and landscape aesthetics, using geotagged social media imagery and
+                <strong>foundation vision–language models (VLMs)</strong>.
             </p>
+
             <ul>
                 <li>
-                    <strong>Robotic Disassembly Planning:</strong> Designed a scoring framework to evaluate robotic
-                    feasibility based on component weight, size, shape, accessibility, and positioning. Used MaxViT for
-                    visual estimation and to recommend human–robot collaboration levels.
+                    <strong>Large-scale CES flow analysis:</strong>
+                    Generated statewide CES maps revealing consistent hotspots along coastal zones, inland greenspaces,
+                    and urban green infrastructure beyond formal park boundaries.
                 </li>
                 <li>
-                    <strong>Repairability Prediction:</strong> Developed supervised and unsupervised learning models
-                    using teardown images to score the repairability of electronic products. Techniques include object
-                    detection (ConvNeXt, ResNet50, VGG16) and clustering (ORB + k-means) to uncover design patterns.
+                    <strong>In-context learning with multimodal models:</strong>
+                    Applied zero-shot and one-shot learning using large vision–language models on
+                    <strong>millions of Flickr images</strong> across the Southeastern U.S., substantially improving
+                    performance with minimal labeling effort.
+                </li>
+                <li>
+                    <strong>Flow quantification and CES bundles:</strong>
+                    Quantified CES flows using <strong>Photo-User-Days (PUDs)</strong> and identified spatial CES
+                    bundles aligned with land use and land cover patterns.
                 </li>
             </ul>
-            <p>These tools support more efficient and scalable remanufacturing decisions.</p>
+
+            <p class="mb-0">
+                This work demonstrates how <strong>foundation VLMs, coupled with multimodal LLMs</strong>, can overcome
+                data scarcity and generalization challenges, enabling scalable CES assessment for sustainability
+                planning and environmental decision-making.
+            </p>
+
+            <h5 class="mt-4">Related Publications</h5>
+            <ul class="ps-3">
+                <li>
+                    <a href="https://doi.org/10.1145/3748636.3764178" target="_blank">
+                        Mapping Cultural Ecosystem Services Using One-Shot In-Context Learning with Multimodal Large
+                        Language Models
+                    </a>
+                </li>
+                <li>
+                    <a href="https://doi.org/10.32942/X29S8C" target="_blank">
+                        Mapping Cultural Ecosystem Service Flows from Social Media Imagery with Vision–Language Models:
+                        A Zero-Shot CLIP Framework
+                    </a>
+                </li>
+            </ul>
         </div>
 
         <div class="container mt-5">
-            <h3><strong>Intelligent Risk Analysis and Mitigation in Robotics</strong></h3>
+            <h3><strong>Urban Tree Mapping</strong></h3>
+
             <div class="row my-3">
-                <div class="col-md-6">
+                <div class="col-md-6 d-flex">
                     <img
-                        src="./assets/research/Fig3.jpg"
-                        class="img-fluid rounded shadow-sm mb-3"
-                        alt="Risk analysis" />
+                        src="./assets/research/Fig8.JPG"
+                        class="img-fluid rounded shadow-sm mb-0"
+                        alt="Tree density change mapping and validation" />
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 d-flex">
                     <img
-                        src="./assets/research/Fig4.jpg"
-                        class="img-fluid rounded shadow-sm mb-3"
-                        alt="Motion forecasting" />
+                        src="./assets/research/Fig9.JPG"
+                        class="img-fluid rounded shadow-sm mb-0"
+                        alt="Tree Inventory Analysis" />
                 </div>
             </div>
+
             <p>
-                This research focuses on enhancing operator safety and risk awareness for the applications of
-                collaborative robotic disassembly tasks.
+                Building end-to-end AI pipelines to detect and monitor <strong>individual urban trees</strong> from
+                high-resolution Earth observation data, supporting urban ecosystem accounting and ecosystem services
+                assessment.
             </p>
             <ul>
                 <li>
-                    <strong>Motion Uncertainty Modeling:</strong> Developed deep learning models (LSTM-Bagging,
-                    GRU-Bagging, BNN-MCD) to predict ranges of hand motion trajectories using IMU data from desktop
-                    disassembly tasks.
+                    <strong>Evaluation of tree locations and crown size:</strong>
+                    Apply tree-detection AI models (e.g., DeepForest, HR-SFANet, LangRS) to derive
+                    <strong>point-based tree locations</strong> and <strong>crown size estimates</strong>.
                 </li>
                 <li>
-                    <strong>Vision-Based Motion Forecasting:</strong> Designed a hybrid system that combines ConvLSTM
-                    (for future-frame generation) and YOLO (for real-time hand detection) on projected human movement.
+                    <strong>City-scale tree mapping and analysis:</strong>
+                    Large-area urban tree mapping with spatiotemporal change analysis and systematic comparison against
+                    external canopy and tree-cover products.
                 </li>
             </ul>
-            <p>These tools support intelligent risk mitigation in remanufacturing environments.</p>
+            <p class="mb-0">
+                By integrating high-resolution Earth observation data with AI-driven detection and spatial analysis,
+                this work enables city-scale, repeatable mapping of individual trees and their structural attributes.
+            </p>
+
+            <h5 class="mt-4">Related Publications</h5>
+            <ul class="ps-3">
+                <li>
+                    <a href="https://doi.org/10.1016/B978-0-443-33803-8.00021-4" target="_blank">
+                        Data-Driven Earth Observation for Disaster Management: Chapter 18 - Ecosystem degradation
+                    </a>
+                </li>
+            </ul>
         </div>
 
         <div class="container mt-5">
-            <h3><strong>Task Allocation in Human-Robot Collaboration</strong></h3>
-            <div class="row my-3">
-                <div class="col-md-6">
-                    <img
-                        src="./assets/research/Fig5.jpg"
-                        class="img-fluid rounded shadow-sm mb-3"
-                        alt="Task allocation" />
+            <h3><strong>Geo-visualization and Interactive Mapping</strong></h3>
+            <div class="row my-3 g-2">
+                <div class="col-md-6 d-flex">
+                    <img src="./assets/research/Fig11.jpg" class="img-fluid shadow-sm mb-3" alt="AgroES Cutural ES" />
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 d-flex">
                     <img
-                        src="./assets/research/Fig6.jpg"
-                        class="img-fluid rounded shadow-sm mb-3"
-                        alt="Collaboration" />
+                        src="./assets/research/Fig12.jpg"
+                        class="img-fluid shadow-sm mb-3"
+                        alt="Cultural Ecosystem Services (CES) Flow Explorer" />
                 </div>
             </div>
             <p>
-                This research develops a decision-making framework to optimize disassembly task allocation between human
-                operators and robots, supporting sustainable remanufacturing.
+                <strong>Geo-visualization and interactive mapping</strong> translate ecosystem service patterns derived
+                from advanced spatial models into intuitive, web-based visual analytics by building on upstream GeoAI
+                modeling results and integrating human-centered design principles to support exploration, communication,
+                and decision-making across diverse use contexts.
             </p>
+
             <ul>
                 <li>
-                    <strong>Multi-Attribute Utility Modeling:</strong> Introduced a utility-based model that considers
-                    disassembly cost, task complexity, and safety, while incorporating uncertainty using Beta
-                    distributions.
+                    <strong>Interactive web-based mapping systems:</strong>
+                    Developed responsive geo-web applications that integrate spatial analysis results with interactive
+                    maps, enabling users to explore ecosystem service patterns across multiple spatial scales.
                 </li>
                 <li>
-                    <strong>Intelligent Task Assignment:</strong> Tasks are allocated based on disassembleability,
-                    safety index, and cost profile, identifying optimal human–robot collaboration strategies.
+                    <strong>Dynamic visualization of ecosystem service flows:</strong>
+                    Designed map-based interfaces to visualize the distribution, intensity, and composition of ecosystem
+                    services, supporting the identification of hotspots, gradients, and spatial trade-offs.
+                </li>
+                <li>
+                    <strong>Linked spatial and statistical views:</strong>
+                    Integrated maps with charts, filters, and dashboards to allow real-time querying, comparison, and
+                    interpretation of ecosystem service indicators.
+                </li>
+                <li>
+                    <strong>Scalable and reproducible geo-web architecture:</strong>
+                    Implemented modular web-mapping pipelines that support large spatial datasets, reproducible
+                    workflows, and extensibility for future ecosystem service assessments.
                 </li>
             </ul>
-            <p>
-                This work supports the development of adaptive, cost-effective, and safe disassembly systems for future
-                remanufacturing environments.
+
+            <p class="mb-0">
+                These geo-visualization frameworks provide a flexible platform for communicating ecosystem service
+                information, supporting exploratory analysis, and enabling data-driven decision support across diverse
+                environmental contexts.
             </p>
+
+            <h5 class="mt-4">Related Works</h5>
+            <ul class="ps-3">
+                <li>
+                    <a href="https://es-geoai.rc.ufl.edu/FL-CES-Flows-CLIP/" target="_blank">
+                        Florida Cultural Ecosystem Services (CES) Flow Explorer
+                    </a>
+                </li>
+                <li>
+                    <a href="https://es-geoai.rc.ufl.edu/agroes-ces/" target="_blank"> AgroES Cutural ES </a>
+                </li>
+            </ul>
         </div>
 
+        <!--
         <div class="container mt-5">
             <h3><strong>Geospatial Artificial Intelligence for Ecosystem Services</strong></h3>
             <div class="row my-3">
@@ -162,6 +229,7 @@
             </ul>
             <p>This work advances scalable and interpretable tools for understanding ecosystem functions using AI.</p>
         </div>
+        -->
 
         <footer class="bg-dark text-white text-center py-3 mt-5">&copy; 2026 All rights reserved.</footer>
 

@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Projects | Sustainable Intelligent Systems</title>
+        <title>Projects Hydroinformatics | Sustainable Intelligent Systems</title>
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="assets/css/style.css" />
@@ -27,140 +27,113 @@
         <div id="navbar-placeholder"></div>
 
         <div class="container mt-5">
-            <h3><strong>Intelligent Robotics for Sustainable Disassembly</strong></h3>
-            <div class="row my-3">
-                <div class="col-md-6">
-                    <img
-                        src="./assets/research/Fig1.jpg"
-                        class="img-fluid rounded shadow-sm mb-3"
-                        alt="Repairability" />
+            <h3><strong>Urban Flood Early Warning Using Data-Driven Models</strong></h3>
+
+            <div class="row my-3 g-2">
+                <div class="col-md-7 d-flex">
+                    <img src="./assets/research/Fig13.jpg" class="img-fluid rounded shadow-sm" />
                 </div>
-                <div class="col-md-6">
-                    <img
-                        src="./assets/research/Fig2.jpg"
-                        class="img-fluid rounded shadow-sm mb-3"
-                        alt="Disassembly scoring framework" />
+                <div class="col-md-5 d-flex">
+                    <img src="./assets/research/Fig14.jpg" class="img-fluid rounded shadow-sm" />
                 </div>
             </div>
+
             <p>
-                My research applies AI to improve repairability and robotic disassembly in remanufacturing systems as
-                part of a circular economy.
+                This research develops
+                <strong>data-driven and optimization-based flood early warning frameworks</strong>
+                that improve the timeliness, reliability, and interpretability of urban flood risk assessment by
+                integrating machine learning, probabilistic modeling, and hydrodynamic simulation.
             </p>
+
             <ul>
                 <li>
-                    <strong>Robotic Disassembly Planning:</strong> Designed a scoring framework to evaluate robotic
-                    feasibility based on component weight, size, shape, accessibility, and positioning. Used MaxViT for
-                    visual estimation and to recommend human–robot collaboration levels.
+                    <strong>Probabilistic rainfall–inundation modeling:</strong>
+                    Developed a data-driven framework using modified Support Vector Machines (SVMs) to estimate
+                    <strong>probabilities of flash flooding</strong>, replacing binary rainfall-threshold warnings with
+                    probabilistic risk outputs.
                 </li>
                 <li>
-                    <strong>Repairability Prediction:</strong> Developed supervised and unsupervised learning models
-                    using teardown images to score the repairability of electronic products. Techniques include object
-                    detection (ConvNeXt, ResNet50, VGG16) and clustering (ORB + k-means) to uncover design patterns.
+                    <strong>Rainfall pattern analysis for hazardous event identification:</strong>
+                    Introduced hydrological rainfall pattern analysis to identify critical short-duration,
+                    high-intensity rainfall events, improving training data quality and early-warning reliability.
+                </li>
+                <li>
+                    <strong>Optimization of rainfall thresholds for pluvial flood warnings:</strong>
+                    Applied <strong>tabu search optimization</strong> to efficiently calibrate rainfall thresholds for
+                    urban flood warnings and warning issuance <strong>1–3 hours in advance</strong>.
                 </li>
             </ul>
-            <p>These tools support more efficient and scalable remanufacturing decisions.</p>
+
+            <p class="mb-0">
+                These methods demonstrate how
+                <strong>machine learning, optimization algorithms, and hybrid data sources</strong> can support
+                efficient, scalable, and interpretable flood early warning systems for urban environments.
+            </p>
+
+            <h5 class="mt-4">Related Publications</h5>
+            <ul class="ps-3">
+                <li>
+                    <a href="https://doi.org/10.3390/w11020348" target="_blank">
+                        Using Tabu Search Adjusted with Urban Sewer Flood Simulation to Improve Pluvial Flood Warning
+                        via Rainfall Thresholds
+                    </a>
+                </li>
+                <li>
+                    <a href="https://doi.org/10.3390/w11122534" target="_blank">
+                        A Data-Driven Probabilistic Rainfall–Inundation Model for Flash-Flood Warnings
+                    </a>
+                </li>
+            </ul>
         </div>
 
         <div class="container mt-5">
-            <h3><strong>Intelligent Risk Analysis and Mitigation in Robotics</strong></h3>
-            <div class="row my-3">
-                <div class="col-md-6">
-                    <img
-                        src="./assets/research/Fig3.jpg"
-                        class="img-fluid rounded shadow-sm mb-3"
-                        alt="Risk analysis" />
-                </div>
-                <div class="col-md-6">
-                    <img
-                        src="./assets/research/Fig4.jpg"
-                        class="img-fluid rounded shadow-sm mb-3"
-                        alt="Motion forecasting" />
-                </div>
-            </div>
-            <p>
-                This research focuses on enhancing operator safety and risk awareness for the applications of
-                collaborative robotic disassembly tasks.
-            </p>
-            <ul>
-                <li>
-                    <strong>Motion Uncertainty Modeling:</strong> Developed deep learning models (LSTM-Bagging,
-                    GRU-Bagging, BNN-MCD) to predict ranges of hand motion trajectories using IMU data from desktop
-                    disassembly tasks.
-                </li>
-                <li>
-                    <strong>Vision-Based Motion Forecasting:</strong> Designed a hybrid system that combines ConvLSTM
-                    (for future-frame generation) and YOLO (for real-time hand detection) on projected human movement.
-                </li>
-            </ul>
-            <p>These tools support intelligent risk mitigation in remanufacturing environments.</p>
-        </div>
+            <h3><strong>Interactive Geo-Visualization for Urban Flood Early Warning Systems</strong></h3>
 
-        <div class="container mt-5">
-            <h3><strong>Task Allocation in Human-Robot Collaboration</strong></h3>
-            <div class="row my-3">
-                <div class="col-md-6">
-                    <img
-                        src="./assets/research/Fig5.jpg"
-                        class="img-fluid rounded shadow-sm mb-3"
-                        alt="Task allocation" />
+            <div class="row my-3 g-2">
+                <div class="col-md-7 d-flex">
+                    <img src="./assets/research/FloodingWarningSystem.gif" class="img-fluid shadow-sm mb-0" />
                 </div>
-                <div class="col-md-6">
-                    <img
-                        src="./assets/research/Fig6.jpg"
-                        class="img-fluid rounded shadow-sm mb-3"
-                        alt="Collaboration" />
+                <div class="col-md-5 d-flex">
+                    <img src="./assets/research/Fig15.jpg" class="img-fluid shadow-sm mb-0" />
                 </div>
             </div>
-            <p>
-                This research develops a decision-making framework to optimize disassembly task allocation between human
-                operators and robots, supporting sustainable remanufacturing.
-            </p>
-            <ul>
-                <li>
-                    <strong>Multi-Attribute Utility Modeling:</strong> Introduced a utility-based model that considers
-                    disassembly cost, task complexity, and safety, while incorporating uncertainty using Beta
-                    distributions.
-                </li>
-                <li>
-                    <strong>Intelligent Task Assignment:</strong> Tasks are allocated based on disassembleability,
-                    safety index, and cost profile, identifying optimal human–robot collaboration strategies.
-                </li>
-            </ul>
-            <p>
-                This work supports the development of adaptive, cost-effective, and safe disassembly systems for future
-                remanufacturing environments.
-            </p>
-        </div>
 
-        <div class="container mt-5">
-            <h3><strong>Geospatial Artificial Intelligence for Ecosystem Services</strong></h3>
-            <div class="row my-3">
-                <div class="col-md-6 mx-auto text-center">
-                    <img
-                        src="./assets/research/Fig7.jpg"
-                        class="img-fluid rounded shadow-sm mb-3 d-block mx-auto"
-                        alt="Ecosystem services mapping" />
-                </div>
-            </div>
             <p>
-                This research applies deep learning and vision-language models to assess cultural ecosystem services
-                such as recreation, aesthetics, and cultural value.
+                This work develops a <strong>web-based flood early warning and visualization system</strong>
+                that integrates hydrological modeling, time-series correction, and real-time monitoring data to support
+                timely flood risk awareness and decision-making.
             </p>
+
             <ul>
                 <li>
-                    <strong>Multimodal Pipelines:</strong> Integrated image-based and textual data to map human–nature
-                    interactions across landscapes.
+                    <strong>Integrated flood forecasting pipeline:</strong>
+                    Combined rainfall–runoff modeling, 1D river routing, and storm surge boundary conditions to simulate
+                    future water stages across hundreds of river cross-sections.
                 </li>
                 <li>
-                    <strong>Foundation Models:</strong> Used CLIP and other large vision-language models for service
-                    classification and retrieval.
+                    <strong>Real-time geo-visualization and alerts:</strong>
+                    Developed a web-based platform that visualizes predicted water stages, flood depths, real-time
+                    rainfall, monitoring stations, and CCTV feeds, with automatic warning signals triggered when
+                    critical thresholds are exceeded.
                 </li>
                 <li>
-                    <strong>Scalable Environmental Assessment:</strong> Enables data-driven decision support for
-                    conservation, planning, and land management.
+                    <strong>Operational decision support:</strong>
+                    Enabled continuous, automated model execution and browser-based access, providing actionable lead
+                    time for flood preparedness and emergency response in urban river basins.
                 </li>
             </ul>
-            <p>This work advances scalable and interpretable tools for understanding ecosystem functions using AI.</p>
+
+            <h5 class="mt-4">Related Presentation</h5>
+            <ul class="ps-3">
+                <li>
+                    <a
+                        href="https://drive.google.com/file/d/1JZPiPuqnaR8nHDgGR8X5mqKkoiGKn5oq/view?usp=drive_link"
+                        target="_blank">
+                        A web-based Tamsui River flood early-warning system with correction of real-time water stage
+                        using monitoring data
+                    </a>
+                </li>
+            </ul>
         </div>
 
         <footer class="bg-dark text-white text-center py-3 mt-5">&copy; 2026 All rights reserved.</footer>

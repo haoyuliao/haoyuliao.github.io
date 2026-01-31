@@ -77,6 +77,20 @@
                 position: relative;
                 z-index: 1;
             }
+
+            /* Desktop default */
+            .zoom-controls {
+                z-index: 1056; /* above image */
+            }
+
+            /* Mobile: move controls below image */
+            @media (max-width: 576px) {
+                .zoom-controls {
+                    position: static !important;
+                    margin: 8px auto 4px;
+                    justify-content: center;
+                }
+            }
         </style>
 
         <!-- Set theme early to avoid flash -->
@@ -331,7 +345,7 @@
                         </div>
 
                         <!-- Zoom controls -->
-                        <div class="position-absolute bottom-0 end-0 m-3 d-flex gap-2">
+                        <div class="position-absolute bottom-0 end-0 m-3 d-flex gap-2 zoom-controls" id="zoomControls">
                             <button class="btn btn-dark btn-sm" id="zoomOut" type="button">−</button>
                             <button class="btn btn-dark btn-sm" id="zoomReset" type="button">Reset</button>
                             <button class="btn btn-dark btn-sm" id="zoomIn" type="button">+</button>

@@ -13,11 +13,11 @@
                 padding-top: 70px;
             }
 
-            /* Make certificate thumbnails look consistent */
-            .cert-card img {
+            /* Make certificate thumbnails consistent */
+            .cert-thumb {
                 width: 100%;
                 height: 220px; /* keeps cards aligned */
-                object-fit: contain; /* KEY: no cropping */
+                object-fit: contain; /* no cropping */
                 background-color: #f8f9fa;
             }
 
@@ -26,18 +26,56 @@
                 line-height: 1.2rem;
             }
 
-            /* Optional: nicer card behavior */
             .cert-card {
                 transition: transform 0.12s ease-in-out;
+                cursor: pointer;
             }
             .cert-card:hover {
                 transform: translateY(-2px);
             }
 
-            /* Modal image responsive */
-            .modal-cert-img {
-                width: 100%;
-                height: auto;
+            /* Zoom area */
+            #zoomWrapper {
+                max-width: 100%;
+                height: 80vh;
+                overflow: hidden;
+                cursor: grab;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: rgba(0, 0, 0, 0.02);
+            }
+
+            #zoomWrapper:active {
+                cursor: grabbing;
+            }
+
+            #certModalImg {
+                max-width: 100%;
+                max-height: 80vh;
+                transform-origin: center center;
+                transition: transform 0.15s ease;
+                user-select: none;
+                pointer-events: none; /* important: lets drag work smoothly on wrapper */
+            }
+
+            /* Make sure overlay controls stay above the zoomed image */
+            #certPrev,
+            #certNext,
+            .btn-close {
+                position: absolute;
+                z-index: 1056; /* higher than image/wrapper */
+            }
+
+            /* Keep the image/wrapper below the controls */
+            #zoomWrapper {
+                position: relative;
+                z-index: 1;
+            }
+
+            #certModalImg {
+                position: relative;
+                z-index: 1;
             }
         </style>
 
@@ -70,19 +108,11 @@
                 <!-- 1 -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="card cert-card h-100 shadow-sm">
-                        <a
-                            href="#"
-                            class="text-decoration-none"
-                            data-bs-toggle="modal"
-                            data-bs-target="#certModal"
-                            data-title="Building Transformer-Based Natural Language Processing Applications"
-                            data-img="assets/certificates/Building%20Transformer-Based%20Natural%20Language%20Processing%20Applications.jpg">
-                            <img
-                                src="assets/certificates/Building%20Transformer-Based%20Natural%20Language%20Processing%20Applications.jpg"
-                                class="cert-thumb"
-                                alt="Building Transformer-Based Natural Language Processing Applications"
-                                data-index="0" />
-                        </a>
+                        <img
+                            src="assets/certificates/Building%20Transformer-Based%20Natural%20Language%20Processing%20Applications.jpg"
+                            class="cert-thumb"
+                            alt="NVIDIA Building Transformer-Based Natural Language Processing Applications"
+                            data-index="0" />
                         <div class="card-body">
                             <div class="cert-title fw-semibold">
                                 NVIDIA Building Transformer-Based Natural Language Processing Applications
@@ -94,40 +124,25 @@
                 <!-- 2 -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="card cert-card h-100 shadow-sm">
-                        <a
-                            href="#"
-                            class="text-decoration-none"
-                            data-bs-toggle="modal"
-                            data-bs-target="#certModal"
-                            data-title="NVIDIA Data Parallelism"
-                            data-img="assets/certificates/NVIDIA_Data%20Parallelism.jpg">
-                            <img
-                                src="assets/certificates/NVIDIA_Data%20Parallelism.jpg"
-                                class="cert-thumb"
-                                alt="NVIDIA Data Parallelism"
-                                data-index="1" />
-                        </a>
+                        <img
+                            src="assets/certificates/NVIDIA_Data%20Parallelism.jpg"
+                            class="cert-thumb"
+                            alt="NVIDIA Data Parallelism"
+                            data-index="1" />
                         <div class="card-body">
                             <div class="cert-title fw-semibold">NVIDIA Data Parallelism</div>
                         </div>
                     </div>
                 </div>
+
                 <!-- 3 -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="card cert-card h-100 shadow-sm">
-                        <a
-                            href="#"
-                            class="text-decoration-none"
-                            data-bs-toggle="modal"
-                            data-bs-target="#certModal"
-                            data-title="Fundamentals of Accelerated Data Science"
-                            data-img="assets/certificates/Fundamentals%20of%20Accelerated%20Data%20Science.jpg">
-                            <img
-                                src="assets/certificates/Fundamentals%20of%20Accelerated%20Data%20Science.jpg"
-                                class="cert-thumb"
-                                alt="Fundamentals of Accelerated Data Science"
-                                data-index="2" />
-                        </a>
+                        <img
+                            src="assets/certificates/Fundamentals%20of%20Accelerated%20Data%20Science.jpg"
+                            class="cert-thumb"
+                            alt="NVIDIA Fundamentals of Accelerated Data Science"
+                            data-index="2" />
                         <div class="card-body">
                             <div class="cert-title fw-semibold">NVIDIA Fundamentals of Accelerated Data Science</div>
                         </div>
@@ -137,19 +152,11 @@
                 <!-- 4 -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="card cert-card h-100 shadow-sm">
-                        <a
-                            href="#"
-                            class="text-decoration-none"
-                            data-bs-toggle="modal"
-                            data-bs-target="#certModal"
-                            data-title="Fundamentals of Deep Learning"
-                            data-img="assets/certificates/Fundamentals%20of%20Deep%20Learning.jpg">
-                            <img
-                                src="assets/certificates/Fundamentals%20of%20Deep%20Learning.jpg"
-                                class="cert-thumb"
-                                alt="Fundamentals of Deep Learning"
-                                data-index="3" />
-                        </a>
+                        <img
+                            src="assets/certificates/Fundamentals%20of%20Deep%20Learning.jpg"
+                            class="cert-thumb"
+                            alt="NVIDIA Fundamentals of Deep Learning"
+                            data-index="3" />
                         <div class="card-body">
                             <div class="cert-title fw-semibold">NVIDIA Fundamentals of Deep Learning</div>
                         </div>
@@ -159,15 +166,11 @@
                 <!-- 5 -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="card cert-card h-100 shadow-sm">
-                        <a
-                            href="#"
-                            class="text-decoration-none"
-                            data-bs-toggle="modal"
-                            data-bs-target="#certModal"
-                            data-title="ml_ece"
-                            data-img="assets/certificates/ml_ece.jpg">
-                            <img src="assets/certificates/ml_ece.jpg" class="cert-thumb" alt="ml_ece" data-index="4" />
-                        </a>
+                        <img
+                            src="assets/certificates/ml_ece.jpg"
+                            class="cert-thumb"
+                            alt="Graduate Machine Learning, ECE, University of Florida"
+                            data-index="4" />
                         <div class="card-body">
                             <div class="cert-title fw-semibold">
                                 Graduate Machine Learning, Department of Electrical and Computer Engineering, University
@@ -176,22 +179,15 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- 6 -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="card cert-card h-100 shadow-sm">
-                        <a
-                            href="#"
-                            class="text-decoration-none"
-                            data-bs-toggle="modal"
-                            data-bs-target="#certModal"
-                            data-title="Completed 5-Day Gen AI Intensive"
-                            data-img="assets/certificates/Completed%205-Day%20Gen%20AI%20Intensive.jpg">
-                            <img
-                                src="assets/certificates/Completed%205-Day%20Gen%20AI%20Intensive.jpg"
-                                class="cert-thumb"
-                                alt="Completed 5-Day Gen AI Intensive"
-                                data-index="5" />
-                        </a>
+                        <img
+                            src="assets/certificates/Completed%205-Day%20Gen%20AI%20Intensive.jpg"
+                            class="cert-thumb"
+                            alt="Gen AI Intensive"
+                            data-index="5" />
                         <div class="card-body">
                             <div class="cert-title fw-semibold">Gen AI Intensive</div>
                         </div>
@@ -201,15 +197,11 @@
                 <!-- 7 -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="card cert-card h-100 shadow-sm">
-                        <a
-                            href="#"
-                            class="text-decoration-none"
-                            data-bs-toggle="modal"
-                            data-bs-target="#certModal"
-                            data-title="EADFEE"
-                            data-img="assets/certificates/EADFEE.jpg">
-                            <img src="assets/certificates/EADFEE.jpg" class="cert-thumb" alt="EADFEE" data-index="6" />
-                        </a>
+                        <img
+                            src="assets/certificates/EADFEE.jpg"
+                            class="cert-thumb"
+                            alt="Advanced JavaScript and Front-End Engineering"
+                            data-index="6" />
                         <div class="card-body">
                             <div class="cert-title fw-semibold">Advanced JavaScript and Front-End Engineering</div>
                         </div>
@@ -219,15 +211,11 @@
                 <!-- 8 -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="card cert-card h-100 shadow-sm">
-                        <a
-                            href="#"
-                            class="text-decoration-none"
-                            data-bs-toggle="modal"
-                            data-bs-target="#certModal"
-                            data-title="EC++"
-                            data-img="assets/certificates/EC.jpg">
-                            <img src="assets/certificates/EC.jpg" class="cert-thumb" alt="EC++" data-index="7" />
-                        </a>
+                        <img
+                            src="assets/certificates/EC.jpg"
+                            class="cert-thumb"
+                            alt="Data Structure and Advanced C++ Programming"
+                            data-index="7" />
                         <div class="card-body">
                             <div class="cert-title fw-semibold">Data Structure and Advanced C++ Programming</div>
                         </div>
@@ -237,15 +225,11 @@
                 <!-- 9 -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="card cert-card h-100 shadow-sm">
-                        <a
-                            href="#"
-                            class="text-decoration-none"
-                            data-bs-toggle="modal"
-                            data-bs-target="#certModal"
-                            data-title="ED3"
-                            data-img="assets/certificates/ED3.jpg">
-                            <img src="assets/certificates/ED3.jpg" class="cert-thumb" alt="ED3" data-index="8" />
-                        </a>
+                        <img
+                            src="assets/certificates/ED3.jpg"
+                            class="cert-thumb"
+                            alt="Interactive Data Visualization with D3.js"
+                            data-index="8" />
                         <div class="card-body">
                             <div class="cert-title fw-semibold">Interactive Data Visualization with D3.js</div>
                         </div>
@@ -255,15 +239,7 @@
                 <!-- 10 -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="card cert-card h-100 shadow-sm">
-                        <a
-                            href="#"
-                            class="text-decoration-none"
-                            data-bs-toggle="modal"
-                            data-bs-target="#certModal"
-                            data-title="ELINUX"
-                            data-img="assets/certificates/ELINUX.jpg">
-                            <img src="assets/certificates/ELINUX.jpg" class="cert-thumb" alt="ELINUX" data-index="9" />
-                        </a>
+                        <img src="assets/certificates/ELINUX.jpg" class="cert-thumb" alt="Linux" data-index="9" />
                         <div class="card-body">
                             <div class="cert-title fw-semibold">Linux</div>
                         </div>
@@ -273,19 +249,11 @@
                 <!-- 11 -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="card cert-card h-100 shadow-sm">
-                        <a
-                            href="#"
-                            class="text-decoration-none"
-                            data-bs-toggle="modal"
-                            data-bs-target="#certModal"
-                            data-title="EPHPMYSQL"
-                            data-img="assets/certificates/EPHPMYSQL.jpg">
-                            <img
-                                src="assets/certificates/EPHPMYSQL.jpg"
-                                class="cert-thumb"
-                                alt="EPHPMYSQL"
-                                data-index="10" />
-                        </a>
+                        <img
+                            src="assets/certificates/EPHPMYSQL.jpg"
+                            class="cert-thumb"
+                            alt="PHP & MySQL"
+                            data-index="10" />
                         <div class="card-body">
                             <div class="cert-title fw-semibold">PHP & MySQL</div>
                         </div>
@@ -295,19 +263,11 @@
                 <!-- 12 -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="card cert-card h-100 shadow-sm">
-                        <a
-                            href="#"
-                            class="text-decoration-none"
-                            data-bs-toggle="modal"
-                            data-bs-target="#certModal"
-                            data-title="EPython"
-                            data-img="assets/certificates/EPython.jpg">
-                            <img
-                                src="assets/certificates/EPython.jpg"
-                                class="cert-thumb"
-                                alt="EPython"
-                                data-index="11" />
-                        </a>
+                        <img
+                            src="assets/certificates/EPython.jpg"
+                            class="cert-thumb"
+                            alt="Python Programming"
+                            data-index="11" />
                         <div class="card-body">
                             <div class="cert-title fw-semibold">Python Programming</div>
                         </div>
@@ -317,18 +277,14 @@
                 <!-- 13 -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="card cert-card h-100 shadow-sm">
-                        <a
-                            href="#"
-                            class="text-decoration-none"
-                            data-bs-toggle="modal"
-                            data-bs-target="#certModal"
-                            data-title="HTML"
-                            data-img="assets/certificates/HTML.jpg">
-                            <img src="assets/certificates/HTML.jpg" class="cert-thumb" alt="HTML" data-index="12" />
-                        </a>
+                        <img
+                            src="assets/certificates/HTML.jpg"
+                            class="cert-thumb"
+                            alt="HTML, CSS, jQuery, Bootstrap - Front-End Web Development Essentials"
+                            data-index="12" />
                         <div class="card-body">
                             <div class="cert-title fw-semibold">
-                                HTML, CSS, jQuery, Bootstrap - Fronted Web Development Essent
+                                HTML, CSS, jQuery, Bootstrap - Front-End Web Development Essentials
                             </div>
                         </div>
                     </div>
@@ -350,37 +306,39 @@
                             data-bs-dismiss="modal"
                             aria-label="Close"></button>
 
-                        <!-- Left arrow -->
+                        <!-- Prev / Next -->
                         <button
                             type="button"
                             class="btn btn-dark position-absolute top-50 start-0 translate-middle-y ms-2"
                             id="certPrev"
                             aria-label="Previous"
-                            style="opacity: 0.85">
+                            style="opacity: 0.85; z-index: 1056">
                             ‹
                         </button>
 
-                        <!-- Right arrow -->
                         <button
                             type="button"
                             class="btn btn-dark position-absolute top-50 end-0 translate-middle-y me-2"
                             id="certNext"
                             aria-label="Next"
-                            style="opacity: 0.85">
+                            style="opacity: 0.85; z-index: 1056">
                             ›
                         </button>
 
-                        <!-- Image -->
-                        <div class="d-flex justify-content-center align-items-center" style="min-height: 70vh">
-                            <img
-                                id="certModalImg"
-                                src=""
-                                alt=""
-                                style="max-width: 100%; max-height: 80vh; object-fit: contain" />
+                        <!-- Zoom wrapper + image -->
+                        <div id="zoomWrapper">
+                            <img id="certModalImg" src="" alt="" />
+                        </div>
+
+                        <!-- Zoom controls -->
+                        <div class="position-absolute bottom-0 end-0 m-3 d-flex gap-2">
+                            <button class="btn btn-dark btn-sm" id="zoomOut" type="button">−</button>
+                            <button class="btn btn-dark btn-sm" id="zoomReset" type="button">Reset</button>
+                            <button class="btn btn-dark btn-sm" id="zoomIn" type="button">+</button>
                         </div>
 
                         <!-- Caption -->
-                        <div class="px-3 pb-3 text-center">
+                        <div class="px-3 py-3 text-center">
                             <div id="certModalCaption" class="fw-semibold"></div>
                             <div id="certModalCounter" class="text-muted small"></div>
                         </div>
@@ -392,10 +350,10 @@
         <!-- Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-        <!-- Theme logic (defines window.initThemeToggle) -->
+        <!-- Theme logic -->
         <script src="assets/js/theme.js"></script>
 
-        <!-- Load navbar + active link + theme button bind -->
+        <!-- Navbar inject -->
         <script>
             fetch("navbar.html")
                 .then((res) => res.text())
@@ -410,19 +368,10 @@
                     if (window.initThemeToggle) window.initThemeToggle();
                 })
                 .catch(console.error);
+        </script>
 
-            // Modal: populate title + image when clicking a certificate
-            const certModal = document.getElementById("certModal");
-            certModal.addEventListener("show.bs.modal", (event) => {
-                const trigger = event.relatedTarget;
-                const title = trigger.getAttribute("data-title") || "Certificate";
-                const img = trigger.getAttribute("data-img");
-
-                document.getElementById("certModalTitle").textContent = title;
-                document.getElementById("certModalImg").src = img;
-                document.getElementById("certModalImg").alt = title;
-            });
-
+        <!-- Modal + Prev/Next + Zoom -->
+        <script>
             (function () {
                 const thumbs = Array.from(document.querySelectorAll(".cert-thumb"));
                 if (!thumbs.length) return;
@@ -437,7 +386,31 @@
                 const prevBtn = document.getElementById("certPrev");
                 const nextBtn = document.getElementById("certNext");
 
+                // zoom elements
+                const wrapper = document.getElementById("zoomWrapper");
+                const zoomInBtn = document.getElementById("zoomIn");
+                const zoomOutBtn = document.getElementById("zoomOut");
+                const zoomResetBtn = document.getElementById("zoomReset");
+
                 let currentIndex = 0;
+
+                // zoom state
+                let scale = 1;
+                let panX = 0;
+                let panY = 0;
+                let isDragging = false;
+                let startX, startY;
+
+                function updateTransform() {
+                    imgEl.style.transform = `translate(${panX}px, ${panY}px) scale(${scale})`;
+                }
+
+                function resetZoom() {
+                    scale = 1;
+                    panX = 0;
+                    panY = 0;
+                    updateTransform();
+                }
 
                 function showByIndex(i) {
                     const n = thumbs.length;
@@ -448,12 +421,13 @@
                     imgEl.alt = t.alt || "Certificate";
                     capEl.textContent = t.alt || "";
                     cntEl.textContent = `${currentIndex + 1} / ${n}`;
+
+                    resetZoom();
                 }
 
-                // open modal when click thumb
+                // open modal when click card
                 thumbs.forEach((t) => {
-                    t.style.cursor = "pointer";
-                    t.addEventListener("click", () => {
+                    t.closest(".cert-card").addEventListener("click", () => {
                         const i = parseInt(t.dataset.index || "0", 10);
                         showByIndex(i);
                         modal.show();
@@ -464,16 +438,62 @@
                 prevBtn.addEventListener("click", () => showByIndex(currentIndex - 1));
                 nextBtn.addEventListener("click", () => showByIndex(currentIndex + 1));
 
-                // keyboard support (only when modal open)
+                // keyboard support
                 modalEl.addEventListener("keydown", (e) => {
                     if (e.key === "ArrowLeft") showByIndex(currentIndex - 1);
                     if (e.key === "ArrowRight") showByIndex(currentIndex + 1);
                 });
 
-                // focus modal so arrows work
                 modalEl.addEventListener("shown.bs.modal", () => {
                     modalEl.focus();
+                    resetZoom();
                 });
+
+                // zoom buttons
+                zoomInBtn.addEventListener("click", () => {
+                    scale = Math.min(scale + 0.2, 5);
+                    updateTransform();
+                });
+
+                zoomOutBtn.addEventListener("click", () => {
+                    scale = Math.max(scale - 0.2, 1);
+                    updateTransform();
+                });
+
+                zoomResetBtn.addEventListener("click", resetZoom);
+
+                // wheel zoom
+                wrapper.addEventListener(
+                    "wheel",
+                    (e) => {
+                        e.preventDefault();
+                        scale += e.deltaY < 0 ? 0.15 : -0.15;
+                        scale = Math.min(Math.max(scale, 1), 5);
+                        updateTransform();
+                    },
+                    { passive: false }
+                );
+
+                // drag to pan
+                wrapper.addEventListener("mousedown", (e) => {
+                    if (scale <= 1) return;
+                    isDragging = true;
+                    startX = e.clientX - panX;
+                    startY = e.clientY - panY;
+                });
+
+                window.addEventListener("mousemove", (e) => {
+                    if (!isDragging) return;
+                    panX = e.clientX - startX;
+                    panY = e.clientY - startY;
+                    updateTransform();
+                });
+
+                window.addEventListener("mouseup", () => {
+                    isDragging = false;
+                });
+
+                wrapper.addEventListener("dblclick", resetZoom);
             })();
         </script>
     </body>

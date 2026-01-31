@@ -26,6 +26,6 @@ A simple and reusable web template for quickly building and deploying websites. 
 
 ## License
 
-This project is licensed under the MIT License. Created by Howard Liao.
+This project is licensed under the MIT License. Created by Hao-Yu Liao.
 
 ---

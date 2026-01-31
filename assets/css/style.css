@@ -27,3 +27,7 @@ html[data-bs-theme="dark"] .btn-outline-dark:hover {
     background-color: rgba(255, 255, 255, 0.1);
     color: #ffffff;
 }
+
+html[data-bs-theme="dark"] .cert-card img {
+    background-color: #212529;
+}

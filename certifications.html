@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Certifications | Sustainable Intelligent Systems</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+
+        <style>
+            body {
+                padding-top: 70px;
+            }
+
+            /* Make certificate thumbnails look consistent */
+            .cert-card img {
+                width: 100%;
+                height: 220px; /* keeps cards aligned */
+                object-fit: contain; /* KEY: no cropping */
+                background-color: #f8f9fa;
+            }
+
+            .cert-title {
+                font-size: 0.95rem;
+                line-height: 1.2rem;
+            }
+
+            /* Optional: nicer card behavior */
+            .cert-card {
+                transition: transform 0.12s ease-in-out;
+            }
+            .cert-card:hover {
+                transform: translateY(-2px);
+            }
+
+            /* Modal image responsive */
+            .modal-cert-img {
+                width: 100%;
+                height: auto;
+            }
+        </style>
+
+        <!-- Set theme early to avoid flash -->
+        <script>
+            (() => {
+                const t = localStorage.getItem("theme");
+                if (t) document.documentElement.setAttribute("data-bs-theme", t);
+            })();
+        </script>
+    </head>
+
+    <body>
+        <div id="navbar-placeholder"></div>
+
+        <div class="container mt-4">
+            <div class="d-flex flex-wrap align-items-end justify-content-between gap-2 mb-3">
+                <div>
+                    <h2 class="mb-1">Professional Certifications</h2>
+                    <p class="text-secondary mb-0">
+                        A collection of professional training certificates and technical coursework completions.
+                    </p>
+                </div>
+            </div>
+
+            <hr class="my-4" />
+
+            <!-- Certificates Grid -->
+            <div class="row g-4">
+                <!-- 1 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card cert-card h-100 shadow-sm">
+                        <a
+                            href="#"
+                            class="text-decoration-none"
+                            data-bs-toggle="modal"
+                            data-bs-target="#certModal"
+                            data-title="Building Transformer-Based Natural Language Processing Applications"
+                            data-img="assets/certification/Building%20Transformer-Based%20Natural%20Language%20Processing%20Applications.jpg">
+                            <img
+                                src="assets/certification/Building%20Transformer-Based%20Natural%20Language%20Processing%20Applications.jpg"
+                                class="card-img-top"
+                                alt="Building Transformer-Based Natural Language Processing Applications" />
+                        </a>
+                        <div class="card-body">
+                            <div class="cert-title fw-semibold">
+                                Building Transformer-Based Natural Language Processing Applications
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 13 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card cert-card h-100 shadow-sm">
+                        <a
+                            href="#"
+                            class="text-decoration-none"
+                            data-bs-toggle="modal"
+                            data-bs-target="#certModal"
+                            data-title="NVIDIA Data Parallelism"
+                            data-img="assets/certification/NVIDIA_Data%20Parallelism.jpg">
+                            <img
+                                src="assets/certification/NVIDIA_Data%20Parallelism.jpg"
+                                class="card-img-top"
+                                alt="NVIDIA Data Parallelism" />
+                        </a>
+                        <div class="card-body">
+                            <div class="cert-title fw-semibold">NVIDIA Data Parallelism</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 9 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card cert-card h-100 shadow-sm">
+                        <a
+                            href="#"
+                            class="text-decoration-none"
+                            data-bs-toggle="modal"
+                            data-bs-target="#certModal"
+                            data-title="Fundamentals of Accelerated Data Science"
+                            data-img="assets/certification/Fundamentals%20of%20Accelerated%20Data%20Science.jpg">
+                            <img
+                                src="assets/certification/Fundamentals%20of%20Accelerated%20Data%20Science.jpg"
+                                class="card-img-top"
+                                alt="Fundamentals of Accelerated Data Science" />
+                        </a>
+                        <div class="card-body">
+                            <div class="cert-title fw-semibold">NVIDIA Fundamentals of Accelerated Data Science</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card cert-card h-100 shadow-sm">
+                        <a
+                            href="#"
+                            class="text-decoration-none"
+                            data-bs-toggle="modal"
+                            data-bs-target="#certModal"
+                            data-title="Fundamentals of Deep Learning"
+                            data-img="assets/certification/Fundamentals%20of%20Deep%20Learning.jpg">
+                            <img
+                                src="assets/certification/Fundamentals%20of%20Deep%20Learning.jpg"
+                                class="card-img-top"
+                                alt="Fundamentals of Deep Learning" />
+                        </a>
+                        <div class="card-body">
+                            <div class="cert-title fw-semibold">NVIDIA Fundamentals of Deep Learning</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 12 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card cert-card h-100 shadow-sm">
+                        <a
+                            href="#"
+                            class="text-decoration-none"
+                            data-bs-toggle="modal"
+                            data-bs-target="#certModal"
+                            data-title="ml_ece"
+                            data-img="assets/certification/ml_ece.jpg">
+                            <img src="assets/certification/ml_ece.jpg" class="card-img-top" alt="ml_ece" />
+                        </a>
+                        <div class="card-body">
+                            <div class="cert-title fw-semibold">
+                                Graduate Machine Learning, Department of Electrical and Computer Engineering, University
+                                of Florida
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card cert-card h-100 shadow-sm">
+                        <a
+                            href="#"
+                            class="text-decoration-none"
+                            data-bs-toggle="modal"
+                            data-bs-target="#certModal"
+                            data-title="Completed 5-Day Gen AI Intensive"
+                            data-img="assets/certification/Completed%205-Day%20Gen%20AI%20Intensive.jpg">
+                            <img
+                                src="assets/certification/Completed%205-Day%20Gen%20AI%20Intensive.jpg"
+                                class="card-img-top"
+                                alt="Completed 5-Day Gen AI Intensive" />
+                        </a>
+                        <div class="card-body">
+                            <div class="cert-title fw-semibold">Gen AI Intensive</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card cert-card h-100 shadow-sm">
+                        <a
+                            href="#"
+                            class="text-decoration-none"
+                            data-bs-toggle="modal"
+                            data-bs-target="#certModal"
+                            data-title="EADFEE"
+                            data-img="assets/certification/EADFEE.jpg">
+                            <img src="assets/certification/EADFEE.jpg" class="card-img-top" alt="EADFEE" />
+                        </a>
+                        <div class="card-body">
+                            <div class="cert-title fw-semibold">Advanced JavaScript and Front-End Engineering</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4 (Note: filename is "EC++.jpg" in your folder) -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card cert-card h-100 shadow-sm">
+                        <a
+                            href="#"
+                            class="text-decoration-none"
+                            data-bs-toggle="modal"
+                            data-bs-target="#certModal"
+                            data-title="EC++"
+                            data-img="assets/certification/EC.jpg">
+                            <img src="assets/certification/EC.jpg" class="card-img-top" alt="EC++" />
+                        </a>
+                        <div class="card-body">
+                            <div class="cert-title fw-semibold">Data Structure and Advanced C++ Programming</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card cert-card h-100 shadow-sm">
+                        <a
+                            href="#"
+                            class="text-decoration-none"
+                            data-bs-toggle="modal"
+                            data-bs-target="#certModal"
+                            data-title="ED3"
+                            data-img="assets/certification/ED3.jpg">
+                            <img src="assets/certification/ED3.jpg" class="card-img-top" alt="ED3" />
+                        </a>
+                        <div class="card-body">
+                            <div class="cert-title fw-semibold">Interactive Data Visualization with D3.js</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card cert-card h-100 shadow-sm">
+                        <a
+                            href="#"
+                            class="text-decoration-none"
+                            data-bs-toggle="modal"
+                            data-bs-target="#certModal"
+                            data-title="ELINUX"
+                            data-img="assets/certification/ELINUX.jpg">
+                            <img src="assets/certification/ELINUX.jpg" class="card-img-top" alt="ELINUX" />
+                        </a>
+                        <div class="card-body">
+                            <div class="cert-title fw-semibold">Linux</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card cert-card h-100 shadow-sm">
+                        <a
+                            href="#"
+                            class="text-decoration-none"
+                            data-bs-toggle="modal"
+                            data-bs-target="#certModal"
+                            data-title="EPHPMYSQL"
+                            data-img="assets/certification/EPHPMYSQL.jpg">
+                            <img src="assets/certification/EPHPMYSQL.jpg" class="card-img-top" alt="EPHPMYSQL" />
+                        </a>
+                        <div class="card-body">
+                            <div class="cert-title fw-semibold">PHP & MySQL</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card cert-card h-100 shadow-sm">
+                        <a
+                            href="#"
+                            class="text-decoration-none"
+                            data-bs-toggle="modal"
+                            data-bs-target="#certModal"
+                            data-title="EPython"
+                            data-img="assets/certification/EPython.jpg">
+                            <img src="assets/certification/EPython.jpg" class="card-img-top" alt="EPython" />
+                        </a>
+                        <div class="card-body">
+                            <div class="cert-title fw-semibold">Python Programming</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 11 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card cert-card h-100 shadow-sm">
+                        <a
+                            href="#"
+                            class="text-decoration-none"
+                            data-bs-toggle="modal"
+                            data-bs-target="#certModal"
+                            data-title="HTML"
+                            data-img="assets/certification/HTML.jpg">
+                            <img src="assets/certification/HTML.jpg" class="card-img-top" alt="HTML" />
+                        </a>
+                        <div class="card-body">
+                            <div class="cert-title fw-semibold">
+                                HTML, CSS, jQuery, Bootstrap - Fronted Web Development Essent
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="bg-dark text-white text-center py-3 mt-5">&copy; 2026 All rights reserved.</footer>
+
+        <!-- Modal (full-size preview) -->
+        <div class="modal fade" id="certModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="certModalTitle">Certificate</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img id="certModalImg" class="modal-cert-img" src="" alt="Certificate preview" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Theme logic (defines window.initThemeToggle) -->
+        <script src="assets/js/theme.js"></script>
+
+        <!-- Load navbar + active link + theme button bind -->
+        <script>
+            fetch("navbar.html")
+                .then((res) => res.text())
+                .then((html) => {
+                    document.getElementById("navbar-placeholder").innerHTML = html;
+
+                    const current = location.pathname.split("/").pop() || "index.html";
+                    document.querySelectorAll(".navbar-nav .nav-link, .navbar-nav .dropdown-item").forEach((link) => {
+                        if (link.getAttribute("href") === current) link.classList.add("active");
+                    });
+
+                    if (window.initThemeToggle) window.initThemeToggle();
+                })
+                .catch(console.error);
+
+            // Modal: populate title + image when clicking a certificate
+            const certModal = document.getElementById("certModal");
+            certModal.addEventListener("show.bs.modal", (event) => {
+                const trigger = event.relatedTarget;
+                const title = trigger.getAttribute("data-title") || "Certificate";
+                const img = trigger.getAttribute("data-img");
+
+                document.getElementById("certModalTitle").textContent = title;
+                document.getElementById("certModalImg").src = img;
+                document.getElementById("certModalImg").alt = title;
+            });
+        </script>
+    </body>
+</html>
